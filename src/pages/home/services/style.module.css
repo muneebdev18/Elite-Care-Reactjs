@@ -1,0 +1,101 @@
+.ServicesUpperSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.servicesWrapper {
+  text-align: center;
+}
+.upperSectionWrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.servicesImgWrapper {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.servicesImgWrapper > p {
+  width: 100%;
+  line-height: normal;
+  letter-spacing: 1.91px;
+  font-size: 21px;
+  font-weight: 600;
+}
+.servicesImgWrapper > p::before {
+  content: "";
+  background-color: #000;
+  /* padding: 2px 0px; */
+  position: absolute;
+  left: 120px;
+  top: 15px;
+  height: 1.5px;
+  width: 75px;
+}
+.servicesImgWrapper p::after {
+  content: "";
+  background-color: #000;
+  /* padding: 2px 0px; */
+  position: absolute;
+  top: 15px;
+  height: 1.5px;
+  width: 75px;
+  right: 120px;
+}
+.title {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  font-family: "Antic Didone";
+}
+.imgWrapper {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.imgWrapper > img {
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+.imgWrapper > img:hover {
+  /* transition: all linear 1.4s; */
+  transform: scale(1.07);
+}
+.descWrapper {
+  text-align: center;
+  margin-top: 10px;
+}
+.descWrapper > .place {
+  font-size: 2rem;
+  font-family: "Antic Didone";
+}
+.price {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px !important;
+}
+.readMore {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  align-items: center;
+}
+.readMore > p {
+  font-size: 14px;
+}
+.readMore > img {
+  width: 19px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .title {
+    font-size: 43px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 39px;
+  }
+}

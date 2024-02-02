@@ -1,0 +1,105 @@
+.testContainer {
+  margin: 5rem 0rem;
+}
+
+.imgTest img {
+  width: 90%;
+}
+
+.testimonalHeading {
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 15px;
+  letter-spacing: 2.5px;
+}
+
+.testimonalHeading > p::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: black;
+  width: 75px;
+  top: 14px;
+  left: -87px;
+}
+
+.title {
+  color: #111;
+  font-family: "Antic Didone";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 15px !important;
+}
+
+.testimonal {
+  color: #666;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 15px !important;
+}
+
+.reviewWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.JD {
+  color: #111;
+  font-size: 16px;
+  font-style: normal;
+  margin-top: 5px;
+  line-height: normal;
+  letter-spacing: 1.91px;
+  text-transform: uppercase;
+}
+
+.arrowsWrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.arrowsWrapper > img {
+  width: 40px;
+}
+
+@media (max-width: 1200px) {
+  .testimonalHeading {
+    font-size: 18px;
+  }
+  .testimonalHeading > p::before {
+    width: 65px;
+    top: 13.5px;
+    left: -77px;
+  }
+}
+
+@media (max-width: 992px) {
+  .testimonalHeading > p::before {
+    width: 50px;
+    top: 13.5px;
+    left: -61px;
+  }
+  .title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 695px) {
+  .testimonalHeading > p::before {
+    display: none;
+  }
+}

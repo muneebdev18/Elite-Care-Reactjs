@@ -1,0 +1,132 @@
+.imgfooter {
+    background-image: url("../../assets/footerbg.png");
+    background-size: cover;
+  
+    background-repeat: no-repeat;
+  
+    overflow: hidden;
+  }
+  @-webkit-keyframes zoom-a {
+    0% {
+      background-size: 100% auto;
+    }
+    100% {
+      background-size: 120% auto;
+    }
+  }
+  @-moz-keyframes zoom-a {
+    0% {
+      background-size: 100% auto;
+    }
+    100% {
+      background-size: 120% auto;
+    }
+  }
+  @-o-keyframes zoom-a {
+    0% {
+      background-size: 100% auto;
+    }
+    100% {
+      background-size: 120% auto;
+    }
+  }
+  @keyframes zoom-a {
+    0% {
+      background-size: 100% auto;
+    }
+    100% {
+      background-size: 120% auto;
+    }
+  }
+  
+  @-webkit-keyframes zoom-b {
+    0% {
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1) translateY(1px);
+    }
+    100% {
+      -ms-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2) translateY(1px);
+    }
+  }
+  @-moz-keyframes zoom-b {
+    0% {
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1) translateY(1px);
+    }
+    100% {
+      -ms-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2) translateY(1px);
+    }
+  }
+  @-o-keyframes zoom-b {
+    0% {
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1) translateY(1px);
+    }
+    100% {
+      -ms-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2) translateY(1px);
+    }
+  }
+  @keyframes zoom-b {
+    0% {
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1) translateY(1px);
+    }
+    100% {
+      -ms-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2) translateY(1px);
+    }
+  }
+  
+  #footerrow {
+    padding-top: 05%;
+  }
+  #footerrow h2 {
+    font-family: "Antic Didone";
+  
+    font-size: 30px;
+  }
+  #footerrow h4 {
+    font-family: "Inter";
+  
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  #footerrow p {
+    font-family: "Inter";
+  }
+  #footerrow .ul a {
+    font-family: "Inter";
+  
+    line-height: 10px;
+  }
+  
+  input::placeholder {
+    color: #fff;
+  }
+  
+  .ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #footerlast p {
+    font-family: "Inter";
+    font-size: 21px;
+  }
+  @keyframes scalenow {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.1);
+    }
+  
+    from {
+      transform: scale(1);
+    }
+  }
+  

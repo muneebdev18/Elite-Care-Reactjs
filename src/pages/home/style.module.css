@@ -1,0 +1,99 @@
+.showCaseHeader{
+    text-align: center;
+}
+.secHeading{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: relative;
+}
+.secHeading::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    width: 84px;
+    top: 18px;
+    left: 468px;
+}
+.secHeading::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    width: 84px;
+    top: 18px;
+    right: 468px;
+
+}
+.secTitle{
+    font-size: 4rem;
+    line-height: 73px;
+    font-weight: 400;
+}
+.secDesc{
+    color: gray;
+    font-size: 19px;
+    margin-top: 9px;
+}
+
+.bottomSide{
+    margin-top: 22px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .secHeading::after{
+
+        right: 368px !important;
+    
+    }
+    .secHeading::before{
+
+        left: 368px !important;
+    
+    }
+   .rightSide > .upperSide{
+   font-size: 20px ;
+   }
+   }
+   @media only screen and (max-width: 1200px) {
+    .secHeading::after{
+
+        right: 288px !important;
+    
+    }
+    .secHeading::before{
+
+        left: 288px !important;
+    
+    }
+   .rightSide > .upperSide{
+   font-size: 20px ;
+   }
+   }
+   @media only screen and (max-width: 992px) {
+    .secHeading::after{
+
+        right: 168px !important ;
+    
+    }
+    .secHeading::before{
+
+        left: 168px !important ;
+    
+    }
+
+   }
+   @media only screen and (max-width: 768px) {
+    .secHeading::after{
+
+        right: 78px !important ;
+    
+    }
+    .secHeading::before{
+
+        left: 78px !important ;
+    
+    }
+
+   }
