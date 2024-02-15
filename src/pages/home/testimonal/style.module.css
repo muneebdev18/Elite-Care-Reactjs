@@ -1,9 +1,55 @@
 .testContainer {
-  margin: 5rem 0rem;
+  margin: 12rem 0rem 0rem 0rem;
 }
-
-.imgTest img {
+.imgTest {
+  position: relative;
+}
+/* .imgTest img {
   width: 90%;
+  margin-bottom: 30px;
+} */
+
+.testimg1 {
+}
+.testimg1 > img {
+  width: 380px;
+}
+.testimg2 {
+  position: absolute;
+  top: 156px;
+  left: 220px;
+}
+.testimg2 > img {
+  width: 260px;
+}
+.testImgTextWrapper {
+  background-color: #d4ae3d;
+  width: 180px;
+  height: 180px;
+  border: 3px solid white;
+  border-radius: 100px;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 50px;
+  z-index: 1;
+  top: 46px;
+}
+.testImgTextWrapper > p {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.happyCustomerNumbers {
+  font-size: 42px;
+  font-family: "Antic Didone";
+}
+.happyCustomerText {
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .testimonalHeading {
@@ -20,7 +66,7 @@
   height: 2px;
   background-color: black;
   width: 75px;
-  top: 14px;
+  top: 12px;
   left: -87px;
 }
 
@@ -75,7 +121,18 @@
 .arrowsWrapper > img {
   width: 40px;
 }
-
+@media (max-width: 1399px) {
+  .testimg1 > img {
+    width: 350px;
+  }
+  .testimg2 > img {
+    width: 210px;
+  }
+  .testImgTextWrapper {
+    width: 160px;
+    height: 160px;
+  }
+}
 @media (max-width: 1200px) {
   .testimonalHeading {
     font-size: 18px;
@@ -86,7 +143,50 @@
     left: -77px;
   }
 }
+@media (max-width: 1199px) {
+  .testimg1 > img {
+    width: 310px;
+  }
+  .testimg2 > img {
+    width: 164px;
+  }
+  .happyCustomerNumbers {
+    font-size: 32px;
+  }
+  .testImgTextWrapper {
+    right: 0px;
 
+    top: 32px;
+  }
+}
+@media (max-width: 991px) {
+  .testImgTextWrapper {
+    left: 220px;
+  }
+  .testimg1 > img {
+    width: 270px;
+  }
+  .testimg2 {
+    position: absolute;
+    top: 153px;
+    left: 167px;
+  }
+  .testimg2 > img {
+    width: 124px;
+  }
+  .happyCustomerNumbers {
+    font-size: 24px;
+  }
+  .happyCustomerText {
+    font-size: 12px;
+  }
+  .testImgTextWrapper {
+    left: 190px;
+    width: 130px;
+    height: 130px;
+    top: 60px;
+  }
+}
 @media (max-width: 992px) {
   .testimonalHeading > p::before {
     width: 50px;
@@ -98,8 +198,64 @@
   }
 }
 
+@media (max-width: 767px) {
+  .imgTest {
+    margin-bottom: 40px;
+  }
+}
 @media (max-width: 695px) {
   .testimonalHeading > p::before {
     display: none;
+  }
+
+  .testimonalHeading {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 29px;
+  }
+  .testimonal {
+    font-size: 15px;
+  }
+}
+@media (max-width: 430px) {
+  .testimg1 > img {
+    width: 245px;
+  }
+  .testimg2 {
+    top: 116px;
+    left: 150px;
+  }
+  .testimg2 > img {
+    width: 144px;
+  }
+  .testImgTextWrapper {
+    left: 170px;
+    top: 20px;
+    width: 130px;
+    height: 130px;
+  }
+  .happyCustomerNumbers {
+    font-size: 24px;
+  }
+  .happyCustomerText {
+    font-size: 12px;
+  }
+}
+@media (max-width: 357px) {
+  .testimonalHeading {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 23px;
+  }
+  .testimonal {
+    font-size: 13px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .JD {
+    font-size: 14px;
   }
 }

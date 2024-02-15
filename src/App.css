@@ -1,7 +1,7 @@
 :root {
   --text: #fff;
   --BlackText: #000;
-  --fontAntic: "Antic Didone"
+  --fontAntic: "Antic Didone";
 }
 
 #root {
@@ -46,7 +46,7 @@ a:focus {
 
 ul,
 li {
-  list-style: none;
+  /* list-style: none; */
   margin: 0 !important;
   padding: 0;
 }

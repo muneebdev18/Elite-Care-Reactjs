@@ -1,0 +1,275 @@
+.img_compare {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+#secrow {
+  position: relative;
+  margin-top: 90px;
+}
+.textdiv {
+  text-align: center;
+}
+.textdiv h6 {
+  font-family: "Inter";
+}
+.textdiv h1 {
+  font-family: "Antic Didone";
+}
+.textdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.textdiv > h6 {
+  font-size: 22px;
+  margin-bottom: 15px !important;
+}
+.textdiv > h6:before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  left: 500px !important;
+  top: 12px !important;
+  height: 1.5px !important;
+  width: 5% !important;
+}
+.textdiv > h6::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  right: 500px !important;
+  top: 12px !important;
+  height: 1.5px !important;
+  width: 5% !important;
+}
+
+.comparison_slider {
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison_item {
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.comparison_item.top {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+
+.comparison_item.top .img_compare {
+  height: 100%;
+  object-fit: cover;
+}
+
+.handle {
+  position: absolute;
+  background-image: url("../../assets/divider.svg");
+  height: 100%;
+  z-index: 3;
+  cursor: col-resize;
+}
+
+.handle svg {
+  display: block;
+  position: absolute;
+  right: calc(50% - 50px);
+  height: 100%;
+}
+
+@media (max-width: 1920px) {
+  .textdiv h6:before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: 490px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+  .textdiv h6::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    right: 490px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+}
+@media (max-width: 1399px) {
+  .textdiv > h6::before {
+    left: 430px !important;
+    top: 12px !important;
+    height: 2px !important;
+  }
+  .textdiv > h6::after {
+    right: 430px !important;
+    top: 12px !important;
+    height: 2px !important;
+  }
+}
+@media (max-width: 1366px) {
+  .textdiv h6:before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: 420px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+  .textdiv h6::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    right: 420px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .textdiv h6::before {
+    left: 345px !important;
+  }
+  .textdiv h6::after {
+    right: 345px !important;
+  }
+}
+/* @media (max-width: 1024px) {
+  .textdiv h6:before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: 340px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+  .textdiv h6::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    right: 340px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+} */
+
+@media (max-width: 991px) {
+  .textdiv > h6 {
+    font-size: 21px;
+  }
+  .textdiv > h6::before {
+    left: 225px !important;
+    width: 50px !important;
+  }
+  .textdiv > h6::after {
+    right: 225px !important;
+    width: 50px !important;
+  }
+}
+
+@media (max-width: 840px) {
+  .textdiv h6:before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: 240px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+  .textdiv h6::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    right: 240px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+}
+@media (max-width: 767px) {
+  .textdiv > h6::before {
+    left: 135px !important;
+    width: 50px !important;
+  }
+  .textdiv > h6::after {
+    right: 135px !important;
+    width: 50px !important;
+  }
+}
+@media (max-width: 525px) {
+  .textdiv h6:before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: 150px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+  .textdiv h6::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    right: 150px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+}
+@media (max-width: 430px) {
+  .textdiv h6:before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: 120px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+  .textdiv h6::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    right: 120px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+}
+@media (max-width: 360px) {
+  .textdiv h6:before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    left: 90px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+  .textdiv h6::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    right: 90px;
+    top: 10px;
+    height: 1px;
+    width: 6%;
+  }
+}

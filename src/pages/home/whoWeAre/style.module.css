@@ -2,7 +2,7 @@
   margin: 5rem 0;
 }
 
-.leftSide>img {
+.leftSide > img {
   height: 290px;
 }
 
@@ -13,7 +13,7 @@
   margin-bottom: 5px;
 }
 
-.whoWeAreHeading>p::before {
+.whoWeAreHeading > p::before {
   content: "";
   position: absolute;
   height: 1.5px;
@@ -30,7 +30,6 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-
 }
 
 .cardsWrapper {
@@ -41,8 +40,8 @@
 
 .cardMissionWrapper {
   border-radius: 12px;
-  background: #FFF;
-  box-shadow: 0px 4px 19.5px 0px rgba(0, 0, 0, 0.10);
+  background: #fff;
+  box-shadow: 0px 4px 19.5px 0px rgba(0, 0, 0, 0.1);
   /* width: 419px; */
   width: 100%;
   height: 438px;
@@ -51,12 +50,12 @@
 }
 
 .missionText {
-  border-left: 1px solid rgba(0, 0, 0, 0.20);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
   padding-left: 13px;
   margin-bottom: 20px;
 }
 
-.missionText>p {
+.missionText > p {
   color: #666;
   font-size: 16px;
   font-style: normal;
@@ -77,23 +76,23 @@
 
 .cardVisionWrapper {
   border-radius: 12px;
-  background: #F7EED3;
-  box-shadow: 0px 4px 19.5px 0px rgba(0, 0, 0, 0.10);
+  background: #f7eed3;
+  box-shadow: 0px 4px 19.5px 0px rgba(0, 0, 0, 0.1);
   /* width: 419px; */
   width: 100%;
 
   height: 438px;
   padding: 25px 20px;
-  margin-top: 20px
+  margin-top: 20px;
 }
 
 .visionText {
-  border-left: 1px solid rgba(0, 0, 0, 0.20);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
   padding-left: 13px;
   margin-bottom: 20px;
 }
 
-.visionText>p {
+.visionText > p {
   color: #666;
   font-size: 16px;
   font-style: normal;
@@ -112,37 +111,32 @@
   text-transform: uppercase;
 }
 
-
-
 @media (max-width: 1400px) {
-
-  .missionText>p {
+  .missionText > p {
     line-height: 30px;
   }
 
-  .visionText>p {
-
+  .visionText > p {
     line-height: 30px;
-
   }
 }
 
 @media (max-width: 1200px) {
-  .leftSide>img {
+  .leftSide > img {
     height: 260px;
   }
 
-  .missionText>p {
+  .missionText > p {
     line-height: 24px;
     font-size: 14px;
   }
 
-  .visionText>p {
+  .visionText > p {
     line-height: 24px;
     font-size: 14px;
   }
 
-  .whoWeAreHeading>p::before {
+  .whoWeAreHeading > p::before {
     width: 65px;
     left: -77px;
   }
@@ -152,18 +146,16 @@
   }
 
   .visionTitle {
-
     font-size: 34px;
-
   }
 
   .missionTitle {
     font-size: 34px;
   }
-  .cardVisionWrapper{
+  .cardVisionWrapper {
     height: 420px;
   }
-  .cardMissionWrapper{
+  .cardMissionWrapper {
     height: 420px;
   }
   .style_testimonalHeading__bljLE {
@@ -171,31 +163,31 @@
     font-weight: 500;
     position: relative;
     margin-bottom: 15px;
-    LETTER-SPACING: 2.5px;
-}
+    letter-spacing: 2.5px;
+  }
 }
 
-@media (max-width:992px){
-  .leftSide>img {
+@media (max-width: 992px) {
+  .leftSide > img {
     height: 100%;
     width: 100%;
   }
-  .whoWeAreHeading{
+  .whoWeAreHeading {
     font-size: 16px;
   }
-  .whoWeAreHeading>p::before {
+  .whoWeAreHeading > p::before {
     width: 50px;
     left: -60px;
   }
-  .whoWeAreTitle{
+  .whoWeAreTitle {
     font-size: 32px;
   }
-  .missionText>p {
+  .missionText > p {
     line-height: 21px;
     font-size: 13px;
   }
 
-  .visionText>p {
+  .visionText > p {
     line-height: 21px;
     font-size: 13px;
   }
@@ -206,58 +198,71 @@
     font-size: 27px;
   }
 }
-@media (max-width:768px) {
-  .leftSide{
-    text-align: center;
+@media (max-width: 768px) {
+  .leftSide {
+    /* text-align: center; */
     margin-bottom: 30px;
   }
-   .leftSide > img{
-   width: 65%;
+  .leftSide > img {
+    width: 50%;
   }
-  .cardVisionWrapper{
+  .cardVisionWrapper {
     height: 100%;
   }
-  .cardMissionWrapper{
+  .cardMissionWrapper {
     height: 100%;
     margin: 0px;
   }
   .whoWeAreHeading {
     font-size: 25px;
   }
-  .whoWeAreHeading >p::before{
+  .whoWeAreHeading > p::before {
     width: 60px;
     left: -71px;
     top: 19px;
   }
-  .whoWeAreTitle{
+  .whoWeAreTitle {
     font-size: 28px;
-  }
 
-}
-@media (max-width:695px){
-  .whoWeAreHeading >p::before{
-display: none;
+    margin-bottom: 20px !important;
   }
 }
+@media (max-width: 695px) {
+  .whoWeAreHeading > p::before {
+    display: none;
+  }
+}
 
-@media (max-width:414px){
+@media (max-width: 414px) {
   .whoWeAreTitle {
     font-size: 24px;
   }
 }
-@media (max-width:380px){
-  .missionText >p{
+@media (max-width: 380px) {
+  .missionText > p {
     /* font-size: 12px !important; */
     line-height: 19px !important;
   }
-  .missionTitle{
+  .missionTitle {
     font-size: 24px;
   }
-  .visionText >p{
+  .visionText > p {
     /* font-size: 12px !important; */
     line-height: 19px !important;
   }
-  .visionTitle{
-    font-size: 24px;
+  .visionTitle {
+    font-size: 21px;
+  }
+  .leftSide > img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 357px) {
+  .whoWeAreHeading {
+    font-size: 20px;
+  }
+  .whoWeAreTitle {
+    font-size: 20px;
   }
 }

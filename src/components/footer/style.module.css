@@ -1,107 +1,173 @@
 .imgfooter {
-    background-image: url("../../assets/footerbg.png");
-    background-size: cover;
+  background-image: url("../../assets/footerbg.png");
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+@-webkit-keyframes zoom-a {
+  0% {
+    background-size: 100% auto;
+  }
+  100% {
+    background-size: 120% auto;
+  }
+}
+@-moz-keyframes zoom-a {
+  0% {
+    background-size: 100% auto;
+  }
+  100% {
+    background-size: 120% auto;
+  }
+}
+@-o-keyframes zoom-a {
+  0% {
+    background-size: 100% auto;
+  }
+  100% {
+    background-size: 120% auto;
+  }
+}
+@keyframes zoom-a {
+  0% {
+    background-size: 100% auto;
+  }
+  100% {
+    background-size: 120% auto;
+  }
+}
+
+@-webkit-keyframes zoom-b {
+  0% {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateY(1px);
+  }
+  100% {
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2) translateY(1px);
+  }
+}
+@-moz-keyframes zoom-b {
+  0% {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateY(1px);
+  }
+  100% {
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2) translateY(1px);
+  }
+}
+@-o-keyframes zoom-b {
+  0% {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateY(1px);
+  }
+  100% {
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2) translateY(1px);
+  }
+}
+@keyframes zoom-b {
+  0% {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateY(1px);
+  }
+  100% {
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2) translateY(1px);
+  }
+}
+
+#footerrow {
+  padding-top: 05%;
+}
+#footerrow h2 {
+  font-family: "Antic Didone";
+
+  font-size: 30px;
+}
+#footerrow h4 {
+  font-family: "Inter";
+
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+}
+#footerrow p {
+  font-family: "Inter";
+}
+#footerrow .ul a {
+  font-family: "Inter";
+
+  line-height: 10px;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.ul a {
+  text-decoration: none;
+  color: #fff;
+}
+#footerlast p {
+  font-family: "Inter";
+  font-size: 21px;
+}
+@keyframes scalenow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+
+  from {
+    transform: scale(1);
+  }
+}
+.ul a:hover{
+  color:  #d4ae3d;
   
-    background-repeat: no-repeat;
-  
-    overflow: hidden;
-  }
-  @-webkit-keyframes zoom-a {
-    0% {
-      background-size: 100% auto;
-    }
-    100% {
-      background-size: 120% auto;
-    }
-  }
-  @-moz-keyframes zoom-a {
-    0% {
-      background-size: 100% auto;
-    }
-    100% {
-      background-size: 120% auto;
-    }
-  }
-  @-o-keyframes zoom-a {
-    0% {
-      background-size: 100% auto;
-    }
-    100% {
-      background-size: 120% auto;
-    }
-  }
-  @keyframes zoom-a {
-    0% {
-      background-size: 100% auto;
-    }
-    100% {
-      background-size: 120% auto;
-    }
-  }
-  
-  @-webkit-keyframes zoom-b {
-    0% {
-      -ms-transform: scale(1, 1);
-      transform: scale(1, 1) translateY(1px);
-    }
-    100% {
-      -ms-transform: scale(1.2, 1.2);
-      transform: scale(1.2, 1.2) translateY(1px);
-    }
-  }
-  @-moz-keyframes zoom-b {
-    0% {
-      -ms-transform: scale(1, 1);
-      transform: scale(1, 1) translateY(1px);
-    }
-    100% {
-      -ms-transform: scale(1.2, 1.2);
-      transform: scale(1.2, 1.2) translateY(1px);
-    }
-  }
-  @-o-keyframes zoom-b {
-    0% {
-      -ms-transform: scale(1, 1);
-      transform: scale(1, 1) translateY(1px);
-    }
-    100% {
-      -ms-transform: scale(1.2, 1.2);
-      transform: scale(1.2, 1.2) translateY(1px);
-    }
-  }
-  @keyframes zoom-b {
-    0% {
-      -ms-transform: scale(1, 1);
-      transform: scale(1, 1) translateY(1px);
-    }
-    100% {
-      -ms-transform: scale(1.2, 1.2);
-      transform: scale(1.2, 1.2) translateY(1px);
-    }
-  }
-  
-  #footerrow {
-    padding-top: 05%;
-  }
+ 
+}
+#iconshover svg{
+  transition: 0.7s;
+}
+#iconshover svg:hover{
+  color:  #d4ae3d;
+  transform: translateY(-10px) rotate(-35deg);
+}
+#icons svg:hover{
+  color:  #d4ae3d;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 1920px) {}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 1600px) {}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 1440px) {
   #footerrow h2 {
-    font-family: "Antic Didone";
-  
-    font-size: 30px;
+    font-size: 25px;
   }
   #footerrow h4 {
-    font-family: "Inter";
-  
-    font-size: 21px;
-    line-height: 30px;
+    font-size: 14px;
+    line-height: 26px;
     font-weight: bold;
   }
   #footerrow p {
-    font-family: "Inter";
+ 
+    font-size: 14px;
   }
   #footerrow .ul a {
-    font-family: "Inter";
   
-    line-height: 10px;
+    line-height: 6px;
+  }
+  #footerrow .ul{
+    padding-left: 08px;
   }
   
   input::placeholder {
@@ -114,19 +180,266 @@
   }
   #footerlast p {
     font-family: "Inter";
-    font-size: 21px;
+    font-size: 8px;
   }
-  @keyframes scalenow {
-    from {
-      transform: scale(1);
-    }
+}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 1366px) {}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 1340px) {}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 1320px) {
+  #footerrow h2 {
+    font-size: 25px;
+  }
+  #footerrow h4 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+  #footerrow p {
+ 
+    font-size: 12px;
+  }
+  #footerrow .ul a {
   
-    to {
-      transform: scale(1.1);
-    }
-  
-    from {
-      transform: scale(1);
-    }
+    line-height: 6px;
+  }
+  #footerrow .ul{
+    padding-left: 08px;
   }
   
+  input::placeholder {
+    color: #fff;
+  }
+  
+  .ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #footerlast p {
+    font-family: "Inter";
+    font-size: 8px;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 1280px) {
+
+  #footerrow h2 {
+    font-size: 22px;
+  }
+  #footerrow h4 {
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: bold;
+  }
+  #footerrow p {
+ 
+    font-size: 14px;
+  }
+  #footerrow .ul a {
+  
+    line-height: 6px;
+  }
+  #footerrow .ul{
+    padding-left: 08px;
+  }
+  
+  input::placeholder {
+    color: #fff;
+  }
+  
+  .ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #footerlast p {
+    font-family: "Inter";
+    font-size: 8px;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 1024px) {}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 840px) {
+  #footerrow {
+    padding-top: 01%;
+  }
+  #footerrow h2 {
+    font-family: "Antic Didone";
+  
+    font-size: 27px;
+  }
+  #footerrow h4 {
+    font-family: "Inter";
+  
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+  }
+  #footerrow p {
+    font-family: "Inter";
+    font-size: 14px;
+  }
+  #footerrow .ul a {
+    font-family: "Inter";
+  
+    line-height: 8px;
+  }
+  #footerrow .ul{
+    padding-left: 20px;
+  }
+  
+  input::placeholder {
+    color: #fff;
+  }
+  
+  .ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #footerlast p {
+    font-family: "Inter";
+    font-size: 10px;
+  }
+
+}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  #footerrow h2 {
+    font-size: 25px;
+  }
+  #footerrow h4 {
+    font-size: 10px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+  #footerrow p {
+ 
+    font-size: 12px;
+    margin-left: 13px;
+  }
+  #footerrow .ul a {
+  
+    line-height: 6px;
+  }
+  #footerrow .ul{
+    padding-left: 08px;
+  }
+  
+  input::placeholder {
+    color: #fff;
+  }
+  
+  .ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+  }
+  #footerlast p {
+    font-family: "Inter";
+    font-size: 8px;
+  }
+  #contactrow #icons svg{
+    
+  width: 14px;
+  }
+  #contactrow div{
+    padding: 0px;
+  }
+  #footerrow div{
+    padding: 0px;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 525px) {
+  #footerrow {
+    padding-top: 01%;
+  }
+  #footerrow h2 {
+    font-family: "Antic Didone";
+  
+    font-size: 20px;
+  }
+  #footerrow h4 {
+    font-family: "Inter";
+  
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+  #footerrow p {
+    font-family: "Inter";
+    font-size: 14px;
+  }
+  #footerrow .ul a {
+    font-family: "Inter";
+  
+    line-height: 7px;
+  }
+  #footerrow .ul{
+    padding-left: 20px;
+  }
+  
+  input::placeholder {
+    color: #fff;
+  }
+  
+  .ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #footerlast p {
+    font-family: "Inter";
+    font-size: 10px;
+  }
+
+}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 430px) {}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 375px) {}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 430px) {
+  #footerrow {
+    padding-top: 01%;
+  }
+  #footerrow h2 {
+    font-family: "Antic Didone";
+  
+    font-size: 20px;
+  }
+  #footerrow h4 {
+    font-family: "Inter";
+  
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+  #footerrow p {
+    font-family: "Inter";
+    font-size: 14px;
+  }
+  #footerrow .ul a {
+    font-family: "Inter";
+  
+    line-height: 7px;
+  }
+  #footerrow .ul{
+    padding-left: 20px;
+  }
+  
+  input::placeholder {
+    color: #fff;
+  }
+  
+  .ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #footerlast p {
+    font-family: "Inter";
+    font-size: 10px;
+  }
+
+}

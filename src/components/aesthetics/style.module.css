@@ -1,0 +1,100 @@
+.upperSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+.title {
+    color:black;
+    font-size: 50px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-family: "Antic Didone";
+    text-align: center;
+    margin-bottom: 20px !important;
+}
+
+.services {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.services>p {
+    color: #111;
+
+    font-size: 20.1px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.services>p::before {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    left: 155px;
+    top: 11px;
+    height: 1.5px;
+    width: 75px;
+}
+
+.services p::after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    top: 11px;
+    height: 1.5px;
+    width: 75px;
+    right: 155px;
+}
+
+.imageSec {
+    position: relative !important;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.cuteImg {
+    position: relative !important;
+    top: -50px;
+    left: 250px;
+}
+
+.firstRow {
+    padding-left: 250px;
+}
+
+.secondRow {
+    padding-top: 140px;
+    padding-left: 20px;
+}
+
+.thirdRow {
+    padding-left: 20px;
+    padding-top: 140px;
+}
+
+.forthRow {
+    padding-top: 100px;
+    padding-left: 180px;
+}
+
+.dottedCircle {
+    z-index: 1;
+    animation: 6s linear 4s infinite rotate;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}

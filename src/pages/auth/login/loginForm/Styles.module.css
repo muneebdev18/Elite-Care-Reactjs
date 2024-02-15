@@ -1,0 +1,183 @@
+.imgContainer > img {
+    width: 100%;
+    padding: 30px;
+  }
+.inputWrapper1,
+.inputWrapper2,
+.inputWrapper3 {
+  margin-bottom: 25px;
+}
+
+.inputWrapper1 > input::placeholder {
+  color: rgba(17, 17, 17, 0.6);
+}
+.inputWrapper2 > input::placeholder {
+  color: rgba(17, 17, 17, 0.6);
+}
+.inputWrapper3 > textarea::placeholder {
+  color: rgba(17, 17, 17, 0.6);
+}
+.inputWrapper1 > select {
+    border-radius: 9.32px;
+    border: 1px solid rgba(17, 17, 17, 0.19);
+    color: rgba(17, 17, 17, 0.6);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.13px; 
+    padding: 12px 23px;
+    outline: none;
+  }
+.inputWrapper1 > input {
+  border-radius: 9.32px;
+  border: 1px solid rgba(17, 17, 17, 0.19);
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.13px; 
+  padding: 12px 23px;
+  outline: none;
+}
+.inputWrapper2 > input {
+  border-radius: 9.32px;
+  border: 1px solid rgba(17, 17, 17, 0.19);
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.13px; /* 200.93% */
+  padding: 12px 23px;
+  outline: none;
+}
+
+.heading {
+    color: #222;
+    font-size: 20.1px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.91px;
+    text-transform: uppercase;
+    margin-left: 83px;
+    margin-bottom: 15px !important;
+  }
+  
+  .heading::before {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    left: 12px;
+    top: 15px;
+    height: 1px;
+    width: 40px;
+  }
+  
+  .rightSide {
+    position: relative;
+    margin-top: 50px;
+    /* margin-left: 140px; */
+  }
+  .btnSendMsg{
+    width: 74%;
+    background-color: #fff;
+    color: #000;
+    /* outline: #000; */
+    border: 1px solid black;
+    font-size: 18px;
+    border-radius: 05px;
+    padding: 12px 23px;
+    transition: .6s;
+  }
+  .btnSendMsg:hover{
+    background-color:#d4ae3d ;
+    color: #fff;
+    outline: none;
+    border: 1px solid #d4ae3d ;
+  }
+  .btnSendMsg svg{
+    font-size: 29px;
+  }
+ #tabbtn button{
+    font-size: 20px;
+    /* margin-left: 20px; */
+ }
+ #tabbtn:active{
+    
+    color: #d4ae3d;
+ }
+
+ @media (max-width:1024px){
+    .imgContainer > img {
+        width: 100%;
+        padding: 30px;
+      }
+    .inputWrapper1 > select {
+        border-radius: 9.32px;
+        border: 1px solid rgba(17, 17, 17, 0.19);
+        color: rgba(17, 17, 17, 0.6);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20.13px; 
+        padding: 05px 13px;
+        outline: none;
+      }
+    .inputWrapper1 > input {
+      border-radius: 9.32px;
+      border: 1px solid rgba(17, 17, 17, 0.19);
+      color: rgba(17, 17, 17, 0.6);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.13px; 
+      padding: 05px 13px;
+      outline: none;
+    }
+    .btnSendMsg{
+        width: 74%;
+        background-color: #fff;
+        color: #000;
+        /* outline: #000; */
+        border: 1px solid black;
+        font-size: 16px;
+        border-radius: 05px;
+        padding: 05px 13px;
+        transition: .6s;
+      }
+    
+      .btnSendMsg svg{
+        font-size: 26px;
+      }
+     #tabbtn button{
+        font-size: 16px;
+        /* margin-left: 20px; */
+     }
+ }
+ @media (max-width:640px){
+    .imgContainer > img {
+        width: 100%;
+        padding: 50px;
+      }
+    .btnSendMsg{
+        width: 100%;
+        background-color: #fff;
+        color: #000;
+        /* outline: #000; */
+        border: 1px solid black;
+        font-size: 16px;
+        border-radius: 05px;
+        padding: 05px 13px;
+        transition: .6s;
+      }
+ }
+ @media (max-width:1024px){
+    
+ }
+
+  @media (max-width:1024px){
+    
+ }
+ @media (max-width:1024px){
+    
+ }

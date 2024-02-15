@@ -66,13 +66,15 @@ const Services = () => {
         </div>
         {/* img section */}
 
-        <div className={`row ${styles.serviceImgWrapper}`}>
+        <div className={`row ${styles.serviceImgWrapperRow}`}>
           {servicesImg &&
             servicesImg.map((item) => {
               return (
                 <div className="col">
                   <div className={styles.imgWrapper}>
-                    <img src={item.img} />
+                    <div className={styles.servicesCardImgsWrapper}>
+                      <img src={item.img} />
+                    </div>
                     <div className={styles.descWrapper}>
                       <p className={styles.place}>{item.place}</p>
                       <p className={styles.price}>{item.price}</p>

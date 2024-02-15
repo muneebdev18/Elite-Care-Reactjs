@@ -1,10 +1,8 @@
-#sec1main {
-  height: 850px;
-}
+
 #sec1row {
   background-color: #d4ae3d;
   color: #fff;
-  height: 600px;
+  margin-bottom: -40px;
   padding: 50px 20px;
 }
 #secportfoliotext h4 {
@@ -24,6 +22,7 @@
 }
 #sec2main {
   position: relative;
+  margin-bottom: -125px;
 }
 #sec2main img {
   -webkit-transition: all 1s ease;
@@ -40,14 +39,7 @@
   transform: scale(1.2);
   -webkit-backface-visibility: hidden;
 }
-/* #sec2main #maskimage1{
-    position: absolute;
-    top: 10%;
-} */
-/* #sec2main #maskimage3{
-    position: absolute;
-    top: 10%;
-} */
+
 #secportfoliotext h4::before {
   content: "";
   background-color: #fff;
@@ -58,29 +50,27 @@
   top: 10px;
 }
 #sec2main #maskimage1 {
+  width: 100%;
   margin-top: 50px;
   overflow: hidden;
   border-radius: 5%;
-
 }
 #sec2main #maskimage1 img {
   width: 100%;
 }
 #sec2main #maskimage2 {
   border-radius: 5%;
+  width: 100%;
   overflow: hidden;
-
 }
 #sec2main #maskimage3 {
   border-radius: 5%;
   overflow: hidden;
   margin-top: 50px;
- 
 }
 #sec2main #maskimage4 {
   border-radius: 5%;
   overflow: hidden;
-
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
@@ -91,9 +81,97 @@
 }
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 1440px) {
+  #secportfoliotext h1 {
+    font-size: 60px;
+  }
+  #sec2main #maskimage1 {
+    width: 100%;
+  }
+  #sec2main #maskimage1 img {
+    width: 100%;
+  }
+  #sec2main #maskimage2 {
+    width: 100%;
+  }
+  #sec2main #maskimage2 img {
+    width: 100%;
+  }
+  #sec2main #maskimage3 {
+    width: 100%;
+  }
+  #sec2main #maskimage3 img {
+    width: 100%;
+  }
+  #sec2main #maskimage4 {
+    width: 100%;
+  }
+  #sec2main #maskimage4 img {
+    width: 100%;
+  }
+  #sec1row {
+    background-color: #d4ae3d;
+    color: #fff;
+    margin-bottom: -40px;
+    padding: 50px 20px;
+  }
+  #sec2main {
+    position: relative;
+    margin-bottom: -125px;
+  }
+
 }
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 1366px) {
+  #secportfoliotext h1 {
+    font-size: 50px;
+  }
+  #sec2main #maskimage1 {
+    width: 100%;
+  }
+  #sec2main #maskimage1 img {
+    width: 100%;
+  }
+  #sec2main #maskimage2 {
+    width: 100%;
+  }
+  #sec2main #maskimage2 img {
+    width: 100%;
+  }
+  #sec2main #maskimage3 {
+    width: 100%;
+  }
+  #sec2main #maskimage3 img {
+    width: 100%;
+  }
+  #sec2main #maskimage4 {
+    width: 100%;
+  }
+  #sec2main #maskimage4 img {
+    width: 100%;
+  }
+  #sec1row {
+    background-color: #d4ae3d;
+    color: #fff;
+   
+    margin-bottom: -40px;
+    padding: 50px 20px;
+  }
+  #sec2main {
+    position: relative;
+    margin-bottom: -125px;
+  }
+  #secportfoliotext h4{
+    margin-left: -20px;
+  }
+  #secportfoliotext h4::before {
+    content: "";
+    background-color: #fff;
+    width: 06%;
+    height: 1px;
+    position: absolute;
+    left: -50px;
+    top: 10px;
+  }
 }
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 1340px) {
@@ -103,25 +181,525 @@
 }
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 1280px) {
+
+  #sec1row {
+    background-color: #d4ae3d;
+    color: #fff;
+    
+    margin-bottom: -40px;
+    padding: 50px 20px;
+  }
+  #secportfoliotext h4 {
+    font-size: 25px;
+    left: 72px;
+  }
+  #secportfoliotext h1 {
+    font-size: 50px;
+  }
+  #secportfoliotext p {
+    font-family: "Inter";
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  #secportfoliotext h4{
+    margin-left: -10px;
+    font-size: 17px;
+  }
+  #secportfoliotext h4::before {
+    content: "";
+    background-color: #fff;
+    width: 06%;
+    height: 1px;
+    position: absolute;
+    left: -50px;
+    top: 10px;
+  }
+ 
+  #sec2main #maskimage1 {
+    width: 100%;
+   
+  }
+  #sec2main #maskimage2 {
+    width: 100%;
+  }
+  #sec2main #maskimage3 {
+    width: 100%;
+  }
+  #sec2main #maskimage4 {
+    width: 100%;
+
+  }
+  #sec2main #maskimage1 img {
+    width: 100%;
+  
+  }
+  #sec2main #maskimage2 img {
+    width: 100%;
+  }
+  #sec2main #maskimage3 img {
+    width: 100%;
+  }
+  #sec2main #maskimage4 img {
+    width: 100%;
+    
+  }
+  #sec2main {
+    position: relative;
+    margin-bottom: -125px;
+  }
 }
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 1024px) {
+
+  #sec1row {
+    background-color: #d4ae3d;
+    color: #fff;
+    margin-bottom: -40px;
+    padding: 50px 20px;
+  }
+  #secportfoliotext h4 {
+    font-size: 25px;
+    left: 72px;
+  }
+  #secportfoliotext h1 {
+    font-size: 45px;
+  }
+  #secportfoliotext p {
+    font-family: "Inter";
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  #secportfoliotext h4{
+    margin-left: -10px;
+    font-size: 17px;
+  }
+  #secportfoliotext h4::before {
+    content: "";
+    background-color: #fff;
+    width: 06%;
+    height: 1px;
+    position: absolute;
+    left: -50px;
+    top: 10px;
+  }
+
+  #sec2main #maskimage1 {
+    width: 100%;
+    
+  }
+  #sec2main #maskimage2 {
+    width: 100%;
+  }
+  #sec2main #maskimage3 {
+    width: 100%;
+  }
+  #sec2main #maskimage4 {
+    width: 100%;
+   
+  }
+  #sec2main #maskimage1 img {
+    width: 100%;
+    
+  }
+  #sec2main #maskimage2 img {
+    width: 100%;
+  }
+  #sec2main #maskimage3 img {
+    width: 100%;
+  }
+  #sec2main #maskimage4 img {
+    width: 100%;
+    
+  }
+  #sec2main {
+    position: relative;
+    margin-bottom: -125px;
+  }
 }
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 840px) {
+
+  #sec1row {
+
+    margin-bottom: -40px;
+    padding: 50px 20px;
+  }
+  #secportfoliotext h4 {
+    font-size: 22px;
+
+    left: 72px;
+  }
+  #secportfoliotext h1 {
+    font-size: 35px;
+  }
+  #secportfoliotext p {
+    font-family: "Inter";
+    font-size: 13px;
+    padding-top: 20px;
+  }
+  #secportfoliotext h4{
+    margin-left: -40px;
+    font-size: 14px;
+  }
+  #secportfoliotext h4::before {
+    content: "";
+    background-color: #fff;
+    width: 06%;
+    height: 1px;
+    position: absolute;
+    left: -30px;
+    top: 08px;
+  }
+
+  #sec2main #maskimage1 {
+    width: 100%;
+ 
+  }
+  #sec2main #maskimage2 {
+    width: 100%;
+  
+  }
+  #sec2main #maskimage3 {
+    width: 100%;
+  }
+  #sec2main #maskimage4 {
+    width: 100%;
+    
+  }
+  #sec2main #maskimage1 img {
+    width: 100%;
+   
+  }
+  #sec2main #maskimage2 img {
+    width: 100%;
+  }
+  #sec2main #maskimage3 img {
+    width: 100%;
+  }
+  #sec2main #maskimage4 img {
+    width: 100%;
+   
+  }
+  #sec2main img {
+    width: 100%;
+  }
+  #sec2main {
+    position: relative;
+    margin-bottom: -125px;
+  }
 }
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 768px) {
+
+  #sec2main {
+    position: relative;
+    margin-bottom: -15px;
+  }
+  #sec1row {
+    background-color: #d4ae3d;
+    color: #fff;
+     margin-bottom: -10px;
+    padding: 50px 20px;
+  }
+  #secportfoliotext h4 {
+    font-size: 22px;
+
+    left: 72px;
+  }
+  #secportfoliotext h1 {
+    font-size: 35px;
+  }
+  #secportfoliotext p {
+    font-family: "Inter";
+    font-size: 13px;
+    padding-top: 20px;
+  }
+  #secportfoliotext h4{
+    margin-left: -40px;
+    font-size: 14px;
+  }
+  #secportfoliotext h4::before {
+    content: "";
+    background-color: #fff;
+    width: 06%;
+    height: 1px;
+    position: absolute;
+    left: -30px;
+    top: 08px;
+  }
+
+  #sec2main #maskimage1 {
+    width: 100%;
+  
+  }
+  #sec2main #maskimage2 {
+    width: 100%;
+  
+  }
+  #sec2main #maskimage3 {
+    width: 100%;
+  }
+  #sec2main #maskimage4 {
+    width: 100%;
+  
+  }
+  #sec2main #maskimage1 img {
+    width: 100%;
+    
+  }
+  #sec2main #maskimage2 img {
+    width: 100%;
+  }
+  #sec2main #maskimage3 img {
+    width: 100%;
+  }
+  #sec2main #maskimage4 img {
+    width: 100%;
+  }
+  #sec2main img {
+    width: 100%;
+  }
+}
+/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 640px) {
+
+  #sec2main {
+    position: relative;
+   
+    margin-bottom: -15px;
+  }
+  #sec1row {
+    background-color: #d4ae3d;
+    color: #fff;
+    margin-bottom: -40px;
+    padding: 50px 20px;
+  }
+  #secportfoliotext h4 {
+    font-size: 22px;
+
+    left: 72px;
+  }
+  #secportfoliotext h1 {
+    font-size: 35px;
+  }
+  #secportfoliotext p {
+    font-family: "Inter";
+    font-size: 13px;
+    padding-top: 20px;
+  }
+  #secportfoliotext h4{
+    margin-left: -10px;
+    font-size: 14px;
+  }
+  #secportfoliotext h4::before {
+    content: "";
+    background-color: #fff;
+    width: 06%;
+    height: 1px;
+    position: absolute;
+    left: -50px;
+    top: 08px;
+  }
+  #col1{
+margin-bottom: 20px;
+  }
+  #sec2main #maskimage1 {
+    width: 100%;
+    
+  
+  }
+  #sec2main #maskimage2 {
+    width: 100%;
+  }
+  #sec2main #maskimage3 {
+    width: 100%;
+    margin-top: 0px;
+  }
+  #sec2main #maskimage4 {
+    width: 100%;  
+  }
+  #sec2main #maskimage1 img {
+    width: 100%;
+  }
+  #sec2main #maskimage2 img {
+    width: 100%;
+    
+  }
+  #sec2main #maskimage3 img {
+    width: 100%;
+    
+   
+  }
+  #sec2main #maskimage4 img {
+    width: 100%;
+
+  }
+  #sec2main img {
+    width: 100%;
+  }
 }
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 525px) {
+
+  #sec1row {
+    background-color: #d4ae3d;
+    color: #fff;
+    margin-bottom: -40px;
+    padding: 150px 20px;
+  }
+  #secportfoliotext h4 {
+    font-size: 22px;
+
+    left: 72px;
+  }
+  #secportfoliotext h1 {
+    font-size: 35px;
+  }
+  #secportfoliotext p {
+    font-size: 13px;
+    padding-top: 20px;
+  }
+  #secportfoliotext h4{
+    margin-left: -10px;
+    font-size: 14px;
+  }
+  #secportfoliotext h4::before {
+    content: "";
+    background-color: #fff;
+    width: 06%;
+    height: 1px;
+    position: absolute;
+    left: -50px;
+    top: 08px;
+  }
+ 
+  #sec2main #maskimage1 {
+    width: 100%;
+
+
+  
+  }
+  #sec2main #maskimage2 {
+    width: 100%;
+   
+
+  
+  }
+  #sec2main #maskimage3 {
+    width: 100%;
+ 
+    margin-top: 0px;
+  }
+  #sec2main #maskimage4 {
+    width: 100%;
+
+  
+  }
+  #sec2main #maskimage1 img {
+    width: 100%;
+  }
+  #sec2main #maskimage2 img {
+    width: 100%;
+    
+  }
+  #sec2main #maskimage3 img {
+    width: 100%;
+   
+  }
+  #sec2main #maskimage4 img {
+    width: 100%;
+
+  }
+  #sec2main img {
+    width: 90%;
+  }
+  #sec2main {
+    position: relative;
+    margin-bottom: -125px;
+  }
 }
+
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 430px) {
-}
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 375px) {
-}
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 360px) {
+
+  #sec1row {
+    margin-bottom: -40px;
+    padding: 150px 20px;
+  }
+  #secportfoliotext h4 {
+    font-size: 22px;
+
+    left: 72px;
+  }
+  #secportfoliotext h1 {
+    font-size: 35px;
+  }
+  #secportfoliotext p {
+    font-size: 13px;
+    padding-top: 20px;
+  }
+  #secportfoliotext h4{
+    margin-left: -10px;
+    font-size: 12px;
+  }
+  #secportfoliotext h4::before {
+    content: "";
+    background-color: #fff;
+    width: 08%;
+    height: 1px;
+    position: absolute;
+    left: -50px;
+    top: 08px;
+  }
+
+ 
+  #sec2main #maskimage1 {
+    width: 100%;
+ 
+
+  
+  }
+  #sec2main #maskimage2 {
+    width: 100%;
+   
+
+  
+  }
+  #sec2main #maskimage3 {
+    width: 100%;
+    
+
+
+  }
+  #sec2main #maskimage4 {
+    width: 100%;
+
+
+  
+  }
+  #sec2main #maskimage1 img {
+    width: 100%;
+    
+ 
+    
+  }
+  #sec2main #maskimage2 img {
+    width: 100%;
+    
+  }
+  #sec2main #maskimage3 img {
+    width: 100%;
+   
+  }
+  #sec2main #maskimage4 img {
+    width: 100%;
+
+  }
+  #sec2main img {
+    width: 100%;
+  }
+  #sec2main {
+    position: relative;
+    margin-bottom: -125px;
+  }
 }

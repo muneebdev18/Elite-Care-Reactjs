@@ -1,0 +1,15 @@
+h1,
+h4 {
+  font-family: "Antic Didone";
+}
+p {
+  font-family: "Inter";
+}
+
+.pagination {
+  cursor: pointer;
+}
+.pagination .page-item .active {
+  background-color: rgb(2, 2, 114);
+  border-color: rgb(2, 2, 114);
+}

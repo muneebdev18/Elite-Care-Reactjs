@@ -28,23 +28,23 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
-        <div className="row  " id={Style.sec2main}>
-        <div className="col-12 col-md-3 " >
+        <div className="row justify-content-center " id={Style.sec2main}>
+        <div className="col-8 col-md-3 " id={Style.col1} >
           <div  id={Style.maskimage1}>
             <img src={mask1} alt=""  />
           </div>
         </div>
-        <div className="col-12 col-md-3   ">
+        <div className="col-8 col-md-3   " id={Style.col1}>
           <div id={Style.maskimage2}>
             <img src={mask2} alt="" />
           </div>
         </div>
-        <div className="col-12 col-md-3  ">
+        <div className="col-8 col-md-3  " id={Style.col1}>
           <div id={Style.maskimage3}>
           <img src={mask3} alt="" />
           </div>
         </div>
-        <div className="col-12 col-md-3 ">
+        <div className="col-8 col-md-3 " id={Style.col1}>
           <div id={Style.maskimage4}>
           <img src={mask4} alt="" />
           </div>

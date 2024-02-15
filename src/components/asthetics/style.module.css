@@ -1,0 +1,407 @@
+.upperSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+.title {
+    color: black;
+    font-size: 50px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-family: "Antic Didone";
+    text-align: center;
+    margin-bottom: 20px !important;
+}
+
+.services {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.services>p {
+    color: #111;
+
+    font-size: 20.1px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.services>p::before {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    left: 155px;
+    top: 11px;
+    height: 1.5px;
+    width: 75px;
+}
+
+.services p::after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    top: 11px;
+    height: 1.5px;
+    width: 75px;
+    right: 155px;
+}
+
+.imageSec {
+    position: relative !important;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.cuteImg {
+    position: relative !important;
+    top: -50px;
+    left: 250px;
+}
+
+.firstRow {
+    padding-left: 250px;
+}
+
+.secondRow {
+    padding-top: 140px;
+    padding-left: 20px;
+}
+
+.thirdRow {
+    padding-left: 20px;
+    padding-top: 140px;
+}
+
+.forthRow {
+    padding-top: 100px;
+    padding-left: 180px;
+}
+
+.containImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.dottedCircle {
+    z-index: 1;
+    animation: 6s linear 4s infinite rotate;
+}
+
+.spanLeft {
+    font-size: 36px !important;
+    padding-right: 30px !important;
+}
+
+.spanRight {
+    font-size: 36px !important;
+    padding-left: 30px !important;
+}
+
+.selectedImg {
+    position: absolute;
+    left: 350px;
+    top: -70px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@media screen and (max-width: 1540px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .imageSec {
+        height: 700px;
+    }
+
+    .spanLeft {
+        font-size: 20px !important;
+    }
+
+    .spanRight {
+        font-size: 20px !important;
+    }
+
+    .botoxCol {
+        position: absolute;
+        right: 65% !important;
+    }
+
+    .cheekCol {
+        position: absolute;
+        left: 550px !important;
+    }
+
+    .jawCol {
+        position: absolute;
+        left: -130px !important;
+        top: 200px !important;
+    }
+
+    .cheekBoneCol {
+        position: absolute;
+        left: 720px !important;
+        top: 200px !important;
+    }
+
+    .underEyeCol {
+        position: absolute;
+        left: -240px !important;
+        top: 530px !important;
+    }
+
+    .foreheadCol {
+        position: absolute;
+        left: 740px !important;
+        top: 500px !important;
+    }
+
+    .nasalCol {
+        position: absolute;
+        left: 10px !important;
+        top: 740px !important;
+    }
+
+    .lipCol {
+        position: absolute;
+        left: 650px !important;
+        top: 700px !important;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .containImage {
+        left: calc(1% - 200px);
+    }
+
+    .botoxCol {
+        right: 55% !important;
+    }
+
+    .jawCol {
+        left: -150px !important;
+    }
+
+    .underEyeCol {
+        left: -240px !important;
+    }
+
+    .nasalCol {
+        left: 30px !important;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .jawCol {
+        left: -20px !important;
+    }
+
+    .underEyeCol {
+        left: -40px !important;
+    }
+
+    .nasalCol {
+        left: 120px !important;
+    }
+}
+
+@media screen and (max-width:1110px) {
+    .containImage {
+        left: calc(1% - 300px);
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .cuteImg {
+        left: 110px;
+        top: 60px;
+        width: 600px;
+    }
+
+    .dottedCircle {
+        top: 10px;
+        left: 70px;
+        width: 700px;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .containImage {
+        left: calc(1% - 400px);
+    }
+}
+
+@media screen and (max-width:840px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .containImage {
+        left: calc(1% - 450px);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .imageSec {
+        margin-top: 70px;
+        height: 500px;
+    }
+
+    .cuteImg {
+        left: 110px;
+        top: 60px;
+        width: 500px;
+    }
+
+    .dottedCircle {
+        top: 10px;
+        left: 70px;
+        width: 600px;
+    }
+
+    .containImage {
+        left: calc(1% - 350px);
+    }
+
+    .selectedImg {
+        left: 310px;
+    }
+
+    .resImg {
+        width: 100px;
+    }
+
+    .dottedImg {
+        width: 10px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .containImage {
+        left: calc(1% - 430px);
+    }
+}
+
+@media screen and (max-width:640px) {
+    .title {
+        font-size: 25px;
+    }
+
+    .imageSec {
+        margin-top: 20px;
+        height: 300px;
+    }
+
+    .cuteImg {
+        left: 110px;
+        top: 60px;
+        width: 350px;
+    }
+
+    .dottedCircle {
+        top: 35px;
+        left: 90px;
+        width: 400px;
+    }
+
+    .containImage {
+        left: calc(1% - 250px);
+    }
+
+    .selectedImg {
+        top: -20px;
+        left: 240px;
+    }
+
+    .resImg {
+        width: 70px;
+    }
+
+    .dottedImg {
+        width: 7px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .containImage {
+        left: calc(1% - 320px);
+    }
+}
+
+@media screen and (max-width:500px) {
+    .containImage {
+        left: calc(1% - 350px);
+    }
+}
+
+@media screen and (max-width:440px) {
+    .imageSec {
+        margin-top: 0;
+        height: 150px;
+    }
+
+    .cuteImg {
+        left: 110px;
+        top: 60px;
+        width: 250px;
+    }
+
+    .dottedCircle {
+        top: 35px;
+        left: 90px;
+        width: 300px;
+    }
+
+    .containImage {
+        left: calc(1% - 250px);
+    }
+
+    .selectedImg {
+        top: -20px;
+        left: 200px;
+    }
+
+    .resImg {
+        width: 60px;
+    }
+
+    .dottedImg {
+        width: 6px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .title {
+        font-size: 22px;
+    }
+
+    .containImage {
+        left: calc(1% - 300px);
+    }
+}
+
+@media screen and (max-width:340px) {
+    .containImage {
+        left: calc(1% - 320px);
+    }
+}

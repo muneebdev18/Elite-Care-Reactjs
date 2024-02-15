@@ -1,0 +1,445 @@
+#sec1main {
+    background-color: #d4ae3d;
+    color: #fff;
+    padding-top: 30px;
+  
+    margin-top: 144px;
+
+ 
+}
+
+@keyframes zoom-b {
+  0% {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateY(1px);
+  }
+  100% {
+    -ms-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2) translateY(1px);
+  }
+}
+#maintext p{
+    font-size: 22px;
+    font-family: "Inter";
+}
+#sec2main{
+    margin-top: 50px;
+    margin-left: 5px;
+   
+}
+
+#maintext h1{
+    font-family: "Antic Didone";
+    font-size: 70px;
+}
+
+#maintext{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    margin-left: 20px;
+    /* border: 2px solid red; */
+}
+
+#maintext p::before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    left: 700px;
+    top: 15px;
+    height: 1px;
+    width: 6%;
+}
+  #maintext p:after {
+    content: "";
+    background-color: #fff;
+    width: 6%;
+    height: 1px;
+    position: absolute;
+    right: 700px;
+    top: 15px;
+  }
+  .column h2{
+    font-family: "Antic Didone";
+    font-size: 30px;
+  }
+  .column{
+  
+    background-color: #F7EED3;
+    color: #000!important;
+    border-radius: 10px;
+    margin-bottom: 110px;
+    overflow: hidden;
+
+   
+  }
+  .imgdiv{
+    overflow: hidden;
+   
+  }
+  .column img:hover{
+    transform: scale(1.2 );
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2)2
+  }
+  .column img{
+    width: 100%;
+    -webkit-transition: all   1s ease;
+    -moz-transition: all   1s ease;
+    -o-transition: all   1s ease;
+ 
+  }
+  .columtext{
+    padding: 20px;
+    text-align: justify;
+    /* border: 2px solid red; */
+  }
+  @media (max-width:1920px) {
+    .column h2{
+        font-family: "Antic Didone";
+        font-size: 30px;
+      }
+      #maintext p{
+        font-size: 22px;
+        font-family: "Inter";
+    }
+      #maintext h1{
+        font-family: "Antic Didone";
+        font-size: 70px;
+    }
+      #maintext p::before {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        left: 700px;
+        top: 15px;
+        height: 1px;
+        width: 6%;
+    }
+      #maintext p:after {
+        content: "";
+        background-color: #fff;
+        width: 6%;
+        height: 1px;
+        position: absolute;
+        right: 700px;
+        top: 15px;
+      }
+    
+  }
+  @media (max-width:1600px) {
+     .column h2{
+        font-family: "Antic Didone";
+        font-size: 27px;
+      }
+      #maintext p{
+        font-size: 22px;
+        font-family: "Inter";
+    }
+      #maintext h1{
+        font-family: "Antic Didone";
+        font-size: 60px;
+    }
+      #maintext p::before {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        left:600px;
+        top: 15px;
+        height: 1px;
+        width: 6%;
+    }
+      #maintext p:after {
+        content: "";
+        background-color: #fff;
+        width: 6%;
+        height: 1px;
+        position: absolute;
+        right:600px;
+        top: 15px;
+      }
+    
+    
+  }
+  @media (max-width:1440px) {
+    .column h2{
+       font-family: "Antic Didone";
+       font-size: 22px;
+     }
+     #maintext p{
+       font-size: 22px;
+       font-family: "Inter";
+   }
+     #maintext h1{
+       font-family: "Antic Didone";
+       font-size: 60px;
+   }
+     #maintext p::before {
+       content: "";
+       background-color: #fff;
+       position: absolute;
+       left: 490px;
+       top: 15px;
+       height: 1px;
+       width: 6%;
+   }
+     #maintext p:after {
+       content: "";
+       background-color: #fff;
+       width: 6%;
+       height: 1px;
+       position: absolute;
+       right: 490px;
+       top: 15px;
+     }
+     .columtext{
+       font-size: 15px;
+     }
+   
+   
+ }
+  @media (max-width:1366px) {
+     .column h2{
+        font-family: "Antic Didone";
+        font-size: 22px;
+      }
+      #maintext p{
+        font-size: 22px;
+        font-family: "Inter";
+    }
+      #maintext h1{
+        font-family: "Antic Didone";
+        font-size: 60px;
+    }
+      #maintext p::before {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        left: 490px;
+        top: 15px;
+        height: 1px;
+        width: 6%;
+    }
+      #maintext p:after {
+        content: "";
+        background-color: #fff;
+        width: 6%;
+        height: 1px;
+        position: absolute;
+        right: 490px;
+        top: 15px;
+      }
+      .columtext{
+        font-size: 15px;
+      }
+    
+    
+  }
+  @media (max-width:1280px) {
+    
+     .column h2{
+        font-family: "Antic Didone";
+        font-size: 20px;
+      }
+      #maintext p{
+        font-size: 22px;
+        font-family: "Inter";
+    }
+      #maintext h1{
+        font-family: "Antic Didone";
+        font-size: 60px;
+    }
+      #maintext p::before {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        left: 480px;
+        top: 15px;
+        height: 1px;
+        width: 6%;
+    }
+      #maintext p:after {
+        content: "";
+        background-color: #fff;
+        width: 6%;
+        height: 1px;
+        position: absolute;
+        right: 480px;
+        top: 15px;
+      }
+      .columtext{
+        font-size: 13px;
+      }
+    
+    
+  }
+  @media (max-width:1024px) {
+     .column h2{
+        font-family: "Antic Didone";
+        font-size: 15px;
+      }
+      #maintext p{
+        font-size: 16px;
+        font-family: "Inter";
+    }
+      #maintext h1{
+        font-family: "Antic Didone";
+        font-size: 45px;
+    }
+      #maintext p::before {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        left: 540px;
+        top: 15px;
+        height: 1px;
+        width: 6%;
+    }
+      #maintext p:after {
+        content: "";
+        background-color: #fff;
+        width: 6%;
+        height: 1px;
+        position: absolute;
+        right: 540px;
+        top: 15px;
+      }
+      .columtext{
+        font-size: 12px;
+      }
+    
+    
+  }
+  @media (max-width:840px) {
+    .column h2{
+      font-family: "Antic Didone";
+      font-size: 22px;
+    }
+    .columtext{
+      font-size: 12px;
+    }
+    #maintext p{
+      font-size: 16px;
+      font-family: "Inter";
+  }
+    #maintext h1{
+      font-family: "Antic Didone";
+      font-size: 40px;
+  }
+    #maintext p::before {
+      content: "";
+      background-color: #fff;
+      position: absolute;
+      left: 280px;
+      top: 15px;
+      height: 1px;
+      width: 6%;
+  }
+    #maintext p:after {
+      content: "";
+      background-color: #fff;
+      width: 6%;
+      height: 1px;
+      position: absolute;
+      right: 280px;
+      top: 15px;
+    }
+    .columtext{
+      font-size: 12px;
+    }
+
+    
+  }
+  @media (max-width:525px) {
+    .column h2{
+      font-family: "Antic Didone";
+      font-size: 22px;
+    }
+    .columtext{
+      font-size: 12px;
+    }
+    #maintext p{
+      font-size: 16px;
+      font-family: "Inter";
+  }
+    #maintext h1{
+      font-family: "Antic Didone";
+      font-size: 40px;
+  }
+    #maintext p::before {
+      content: "";
+      background-color: #fff;
+      position: absolute;
+      left: 280px;
+      top: 15px;
+      height: 1px;
+      width: 6%;
+  }
+    #maintext p:after {
+      content: "";
+      background-color: #fff;
+      width: 6%;
+      height: 1px;
+      position: absolute;
+      right: 280px;
+      top: 15px;
+    }
+    .column{
+      width: 80%;
+      margin-bottom: 30px;
+      margin-left: 10%;
+    }
+    .columtext{
+      font-size: 12px;
+    }
+  
+  
+    
+  }
+  @media (max-width:430px) {
+     .column h2{
+        font-family: "Antic Didone";
+        font-size: 22px;
+      }
+      .columtext{
+        font-size: 12px;
+      }
+      #maintext p{
+        font-size: 16px;
+        font-family: "Inter";
+    }
+      #maintext h1{
+        font-family: "Antic Didone";
+        font-size: 40px;
+    }
+      #maintext p::before {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        left: 220px;
+        top: 15px;
+        height: 1px;
+        width: 6%;
+    }
+      #maintext p:after {
+        content: "";
+        background-color: #fff;
+        width: 6%;
+        height: 1px;
+        position: absolute;
+        right: 220px;
+        top: 15px;
+      }
+      .column{
+
+        margin-bottom: 30px;
+      }
+    
+    
+  }

@@ -12,23 +12,23 @@ const Footer = () => {
     <div className={` container-fluid position-relative  ${Styles.imgfooter}`} >
       <div className="container-fluid text-white   p-4  ">
         <div className="row justify-content-center " id={Styles.footerrow}>
-          <div className="col-12 col-md-4   ">
+          <div className="col-12 col-md-4  col-lg-3 px-0   ">
             <div className="mx-4">
               <h2>Contact</h2>
-              <div className="row pt-4 border-top ">
-                <div className="col-2 col-md-1 ">
-                  <div className=" d-flex flex-column gap-3 ">
+              <div className="row pt-4 border-top " id={Styles.contactrow}>
+                <div className="col-2 col-md-1  col-lg-1 ">
+                  <div className=" d-flex flex-column gap-3 " id={Styles.icons}>
                     <IoCall size={20} />
                     <MdEmail size={20} />
                     <MdLocationPin size={20} />
                   </div>
                 </div>
-                <div className="col-3 col-md-3">
+                <div className="col-3 col-md-2 col-lg-3">
                   <h4>Call Us</h4>
                   <h4>Email</h4>
                   <h4>Address</h4>
                 </div>
-                <div className="col-7 col-md-8">
+                <div className="col-7 col-md-9 col-lg-8">
                   <p>500520520</p>
                   <p>Genduade@gmail.com</p>
                   <p>3763 Harbor Light Road 94000 Zip code california</p>
@@ -36,7 +36,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-2  ">
+          <div className="col-12 col-md-4 col-lg-3  ">
             <div className="mx-4">
               <h2>QUICK LINK</h2>
               <div className="pt-4 border-top">
@@ -76,7 +76,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-3 ">
+          <div className="col-12 col-md-4  col-lg-3">
             <div className="mx-4 ">
               <h2>ABOUT US</h2>
               <div className="pt-4 border-top">
@@ -90,10 +90,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-3   ">
+          <div className="col-12 col-md-12  col-lg-3 ">
             <div className="mx-4">
               <h2>NEWSLETTER</h2>
-              <div className=" flex pt-4 border-top">
+              <div className=" flex pt-4 border-top" id={Styles.iconshover}>
                 <div className=" border border-0 ">
                   <div className="position-relative" >
                     <input

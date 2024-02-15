@@ -1,92 +1,214 @@
-.imgfooter h2 {
-  border: 4px solid red;
-  font-family: "Antic Didone";
+/* .navContainer {
+  background-image: url("../../assets/homebgmain.png");
+  background-size: cover;
+  height: 865px;
+  background-repeat: no-repeat;
+} */
+.upperText svg {
+  transition: 0.7s;
+}
+.upperText svg:hover {
+  color: #d4ae3d;
+  transform: translateY(-10px) rotate(-35deg);
 }
 
-#seclogo {
-  display: flex;
-  justify-content: center;
+.mobupperText svg {
+  transition: 0.7s;
+}
+.mobupperText svg:hover {
+  color: #d4ae3d;
+  transform: translateY(-10px) rotate(-35deg);
+}
+.newNavbarRowWrapper {
+}
+.navContainer {
+  height: 865px;
+}
+.navWrapper {
   align-items: center;
-}
-.logonavbar {
-  text-align: center;
-}
-.logonavbar h1 {
-  font-family: "Antic Didone";
-  font-size: 70px;
-}
-#sec1home {
   position: relative;
 }
-#sec1home ul a {
-  color: #fff;
-  font-size: 16px;
-  font-family: "Inter";
-  margin-left: 10px;
+
+.navMain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 17px;
 }
-#sectext {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
+
+.logo {
+  font-size: 3rem;
+  color: var(--text);
 }
-#sectext p {
-  font-family: "Inter";
-  font-size: 18px;
+
+.hamBurger {
+  display: none;
+  /* display: block; */
+  color: white;
+  font-size: 22px;
 }
-#sectext h5 {
-  font-family: "Antic Didone";
-  font-size: 90px;
-  font-weight: lighter;
+
+.rightSide {
 }
-#sectext h6 {
-  font-family: "Antic Didone";
-  font-size: 69px;
-  line-height: 50px;
+
+.upperSection {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text);
+  border-bottom: 1px solid;
+  padding-bottom: 20px;
+  align-items: center;
 }
-#sectext button {
-  font-family: "Inter";
-  font-size: 21px;
-  margin-top: 25px;
-  padding: 20px 50px;
+
+.bottomSection {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  color: var(--text);
+  padding-top: 20px;
 }
-.socialicons {
-  padding-left: 20px;
+.upperText {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.socialsFollow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socialsFollow > svg {
+  font-size: 29px;
+  margin-left: 9px;
+}
+.linksWrapper {
   display: flex;
   justify-content: space-between;
 }
-.socialicons .icon {
-  margin-left: 10px;
+
+.linksWrapper > a {
+  text-decoration: none;
+  color: var(--text);
 }
-#line p:before {
-  content: "";
-  background-color: #fff;
-  width: 10%;
-  height: 1px;
-  position: absolute;
-  left: 628px;
-  top: 12px;
+
+.navBtn {
+  padding: 10px 12px;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-#line p:after {
-  content: "";
-  background-color: #fff;
-  width: 10%;
-  height: 1px;
-  position: absolute;
-  left: 1100px;
-  top: 12px;
+.navBtn > svg {
+  font-size: 22px;
 }
-#scrollmain img {
-  /* position: absolute; */
-  top: 0;
-  left: 42%;
-  animation: 7s linear 2s infinite style_rotate__omGfe;
-  margin: 0 auto;
-  display: table;
+.navBtn:hover {
+  background-color: var(--text);
+  color: black;
+  border: 1px solid white;
+  transition: all linear 0.4s;
+}
+.mobupperText {
+  color: var(--text);
+  font-size: 16px;
+  margin-bottom: 24px !important;
+}
+
+.moblinksWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  /* border-left: 1px solid var(--text); */
+}
+
+.mobLeftSide {
+}
+
+.moblinksWrapper > a {
+  color: var(--text);
+  text-decoration: none;
+  margin-bottom: 14px !important;
+}
+
+/* Banner Text */
+
+.bannerContainer {
+  width: 100%;
+  height: 555px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerWrapper {
   position: relative;
-  left: 0;
-  right: 0;
-  top: 65%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bannerWrapper > .welcome {
+  color: var(--text);
+  font-size: 20px;
+}
+.welcome {
+  margin-bottom: 10px !important;
+}
+.welcome::before {
+  position: absolute;
+  width: 70px;
+  content: "";
+  height: 2px;
+  background-color: white;
+  top: 13px;
+  left: 148px;
+}
+
+.welcome::after {
+  position: absolute;
+  width: 70px;
+  content: "";
+  height: 2px;
+  background-color: white;
+  top: 13px;
+  right: 148px;
+}
+.navButton {
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: 10px 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.navButton:hover {
+  background-color: white;
+  color: black;
+  transition: all linear 0.4s;
+}
+
+.titleNav1,
+.titleNav2 {
+  font-size: 60px;
+  font-family: "Antic Didone";
+  color: var(--text);
+  line-height: 70px;
+}
+
+.scrollWheel {
+  position: absolute;
+  width: 220px;
+  animation: 7s linear 4s infinite rotate;
 }
 @keyframes rotate {
   from {
@@ -98,127 +220,259 @@
   }
 }
 
-/* @media (max-width:430px) {
-    #sec1home{
-        background-position: center left -480px;
-    }
-} */
+/* Responsiveness */
 
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 1920px) {
-  #sec1home {
-    height: 900px !important;
+@media (max-width: 1627px) {
+  .navBtn {
+    padding: 13px 11px;
   }
-  #sec1home ul a {
+  .upperText {
     font-size: 14px;
-    font-family: "Inter";
-    margin-left: 15px;
+  }
+  .linksWrapper > a {
+    font-size: 14px;
   }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 1600px) {
-  #sec1home ul a {
-    font-size: 10px;
-    font-family: "Inter";
-    margin-left: 12px;
+
+@media (max-width: 1491px) {
+  .navBtn {
+    padding: 13px 8px;
   }
-  .logonavbar h1 {
-    font-family: "Antic Didone";
-    font-size: 60px;
-  }
-  #sectext p {
-    font-family: "Inter";
-    font-size: 18px;
-  }
-  #sectext h5 {
-    font-family: "Antic Didone";
-    font-size: 80px;
-  }
-  #sectext h6 {
-    font-family: "Antic Didone";
-    font-size: 59px;
-  }
-  #sectext button {
-    font-family: "Inter";
-    font-size: 15px;
-  }
-  #line p:before {
-    content: "";
-    background-color: #fff;
-    width: 10%;
-    height: 1px;
-    position: absolute;
-    left: 480px;
-    top: 12px;
-  }
-  #line p:after {
-    content: "";
-    background-color: #fff;
-    width: 10%;
-    height: 1px;
-    position: absolute;
-    left: 960px;
-    top: 12px;
+  .socialsFollow > svg {
+    font-size: 25px;
+    margin-left: 5px;
   }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 1440px) {
-  .logonavbar h1 {
-    font-size: 40px;
+
+@media (max-width: 1435px) {
+  .navBtn {
+    padding: 13px 6px;
+    font-size: 13px;
   }
-  #sec1home ul a {
-    color: #fff;
+}
+@media (max-width: 1406px) {
+  .navBtn {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .navBtn {
     font-size: 12px;
   }
-  #line p:before {
-    content: "";
-    background-color: #fff;
-    width: 10%;
-    height: 1px;
-    position: absolute;
-    left: 430px;
-    top: 12px;
-  }
-  #line p:after {
-    content: "";
-    background-color: #fff;
-    width: 10%;
-    height: 1px;
-    position: absolute;
-    left: 860px;
-    top: 12px;
+  .upperText {
+    font-size: 12px;
   }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 1366px) {
+
+/* @media (max-width: 1336px) {
+  .upperText {
+    font-size: 14px;
+  }
+  .navBtn {
+    font-size: 14px;
+  }
+} */
+
+@media (max-width: 1252px) {
+  .socialsFollow > svg {
+    font-size: 22px;
+    margin-left: 5px;
+  }
+
+  .navBtn {
+    font-size: 11px;
+    padding: 10px 5px;
+  }
+  .linksWrapper > a {
+    font-size: 14px;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 1340px) {
+
+@media (max-width: 1199px) {
+  .upperText {
+    font-size: 12px;
+  }
+
+  .linksWrapper > a {
+    font-size: 13px;
+  }
+  .socialsFollow > svg {
+    font-size: 21px;
+    margin-left: 5px;
+  }
+
+  .navBtn {
+    font-size: 11px;
+    padding: 8px 6px;
+    gap: 5px;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 1320px) {
+
+@media (max-width: 1169px) {
+  .upperText {
+    font-size: 12px;
+  }
+
+  .linksWrapper > a {
+    font-size: 12px;
+  }
+
+  .navBtn {
+    font-size: 11px;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 1280px) {
+
+@media (max-width: 1080px) {
+  .upperText {
+    font-size: 11px;
+  }
+  .navBtn {
+    padding: 9px 7px;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
+@media (max-width: 1050px) {
+  .socialsFollow > svg {
+    font-size: 18px;
+  }
+  .navBtn {
+    padding: 7px 5px;
+  }
+}
+@media (max-width: 1095px) {
+  .navBtn {
+    padding: 9px 8px;
+  }
+
+  .upperText {
+    font-size: 11px;
+  }
+
+  .linksWrapper > a {
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 1024px) {
+  .navBtn {
+    font: 10px;
+  }
+
+  .upperText {
+    font-size: 10px;
+  }
+
+  .linksWrapper > a {
+    font-size: 10px;
+  }
+  .navBtn {
+    font-size: 9px;
+  }
+  .socialsFollow {
+    gap: 0px;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 840px) {
+
+@media (max-width: 991px) {
+  .upperSection,
+  .bottomSection {
+    display: none;
+  }
+
+  .hamBurger {
+    display: block;
+  }
+
+  .mobileNavbarContainer {
+    position: absolute;
+    opacity: 0.8 !important;
+    z-index: 2;
+    width: 100%;
+    height: 763px;
+    top: 100px;
+    left: 0px;
+    background-color: black;
+    opacity: 0.4;
+    transition: all linear 0.3s;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 768px) {
+
+@media (max-width: 751px) {
+  .titleNav1,
+  .titleNav2 {
+    font-size: 50px;
+  }
+  .welcome::before {
+    left: 100px;
+  }
+  .welcome::after {
+    right: 100px;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 525px) {
+
+@media (max-width: 630px) {
+  .titleNav1,
+  .titleNav2 {
+    font-size: 40px;
+  }
+  .welcome {
+    font-size: 17px !important;
+  }
+  .welcome::before {
+    left: 60px;
+    top: 10px;
+    width: 57px;
+  }
+  .welcome::after {
+    right: 60px;
+    top: 10px;
+    width: 57px;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 430px) {
+@media (max-width: 509px) {
+  .titleNav1,
+  .titleNav2 {
+    font-size: 30px;
+  }
+  .welcome::before {
+    left: -5px;
+    width: 60px;
+  }
+  .welcome::after {
+    right: -5px;
+    width: 60px;
+  }
+  .logo {
+    font-size: 2rem;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 375px) {
+
+@media (max-width: 387px) {
+  .titleNav1,
+  .titleNav2 {
+    font-size: 23px;
+    line-height: 50px;
+  }
+  .welcome {
+    font-size: 15px !important;
+  }
+  .welcome::before {
+    left: -10px;
+    width: 44px;
+    top: 9px;
+  }
+  .welcome::after {
+    right: -10px;
+    width: 44px;
+    top: 9px;
+  }
 }
-/*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 360px) {
+@media (max-width: 380px) {
+  .mobupperText {
+    font-size: 13px;
+  }
+
+  .moblinksWrapper > a {
+    font-size: 13px;
+  }
 }

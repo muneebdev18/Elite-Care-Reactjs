@@ -1,0 +1,130 @@
+.textblog {
+  margin: 20px 0px 20px 0px;
+}
+.textblog button {
+  border: 1px solid black;
+  padding: 5px 30px;
+  transition: 0.8s;
+}
+.textblog button:hover {
+  background-color: #d4ae3d;
+  color: white;
+}
+h1,
+h4 {
+  font-family: "Antic Didone";
+}
+p {
+  font-family: "Inter";
+}
+.searchbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #f7eed3;
+  border-radius: 10px;
+}
+.searchbar svg {
+  background-color: #d4ae3d;
+  color: white;
+  width: 55px;
+  height: 52px;
+  border-radius: 10px;
+}
+.searchbar input {
+  background-color: #f7eed3;
+  border-radius: 10px;
+  padding: 15px;
+  padding-left: 20px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+.searchbar input::placeholder {
+  color: black;
+}
+.category {
+  background-color: #f7eed3;
+  padding: 10px;
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+
+.category ul li {
+  margin: 20px 0px;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+.blog {
+  background-color: #f7eed3;
+  padding: 10px;
+
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+.latestblog {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px 10px;
+  gap: 20px;
+ 
+}
+.latestblog h6 {
+  font-family: "Antic Didone";
+  font-weight: 800;
+}
+.imgagesdiv {
+  overflow: hidden;
+}
+.imgagesdiv img {
+   width: 70px;
+  transition: 0.6s;
+}
+.imgagesdiv img:hover {
+  transform: scale(1.2);
+}
+.populartag {
+  background-color: #f7eed3;
+  margin: 20px 0px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.populartag span {
+  margin: 04px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+}
+.populartag span a {
+  display: inline-flex;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: black;
+
+  /* margin: 10px; */
+}
+
+@media (max-width: 1024px) {
+  .latestblog{
+    width: 100%;
+  }
+
+  .latestblog h6 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 840px) {
+  .latestblog {
+    padding: 10px 0px;
+  }
+
+  .latestblog h6 {
+    font-size: 11px;
+  }
+
+  .latestblog img {
+    width: 60px;
+  }
+}

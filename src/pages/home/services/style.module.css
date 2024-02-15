@@ -5,6 +5,7 @@
 }
 .servicesWrapper {
   text-align: center;
+  margin-top: 50px;
 }
 .upperSectionWrapper {
   text-align: center;
@@ -27,8 +28,8 @@
   background-color: #000;
   /* padding: 2px 0px; */
   position: absolute;
-  left: 120px;
-  top: 15px;
+  left: 135px;
+  top: 12px;
   height: 1.5px;
   width: 75px;
 }
@@ -37,10 +38,10 @@
   background-color: #000;
   /* padding: 2px 0px; */
   position: absolute;
-  top: 15px;
+  top: 12px;
   height: 1.5px;
   width: 75px;
-  right: 120px;
+  right: 135px;
 }
 .title {
   font-size: 50px;
@@ -50,19 +51,32 @@
   text-transform: uppercase;
   font-family: "Antic Didone";
 }
+.servicesCardImgsWrapper {
+  border-radius: 100%;
+  /* border: 1px solid; */
+  width: 100%;
+  overflow: hidden;
+}
+.servicesCardImgsWrapper > img {
+  transition: transform 3.2s;
+  /* width: 100%; */
+}
+.servicesCardImgsWrapper > img:hover {
+  transform: scale(1.07);
+}
 .imgWrapper {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.imgWrapper > img {
+/* .imgWrapper > img {
   width: 250px;
   transition: transform 0.3s ease-in-out;
 }
 .imgWrapper > img:hover {
-  /* transition: all linear 1.4s; */
+
   transform: scale(1.07);
-}
+} */
 .descWrapper {
   text-align: center;
   margin-top: 10px;
@@ -97,5 +111,27 @@
 @media only screen and (max-width: 768px) {
   .title {
     font-size: 39px;
+  }
+}
+
+@media only screen and (max-width: 417px) {
+  .servicesCardImgsWrapper > img {
+    width: 260px;
+  }
+  .title {
+    font-size: 27px;
+  }
+  .servicesImgWrapper > p {
+    font-size: 17px;
+  }
+  .servicesImgWrapper > p::before {
+    left: 115px;
+    top: 9px;
+    width: 65px;
+  }
+  .servicesImgWrapper > p::after {
+    right: 115px;
+    top: 9px;
+    width: 65px;
   }
 }

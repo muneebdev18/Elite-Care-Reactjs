@@ -1,0 +1,213 @@
+.appointmentFormContainer {
+  margin-bottom: 5rem;
+}
+.imgContainer > img {
+  width: 100%;
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+.heading {
+  color: #222;
+  font-size: 20.1px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.91px;
+  text-transform: uppercase;
+  margin-left: 83px;
+  margin-bottom: 15px !important;
+}
+
+.heading::before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  height: 1.9px;
+  width: 70px;
+}
+.title {
+  color: #111;
+  font-family: "Antic Didone";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px; /* 100% */
+  text-transform: uppercase;
+}
+
+.LineWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  align-items: center;
+}
+
+.day {
+  font-size: 14px;
+}
+.line {
+  font-size: 14px;
+}
+.time {
+  font-size: 14px;
+}
+
+.inputWrapper1,
+.inputWrapper2,
+.inputWrapper3 {
+  margin-bottom: 25px;
+}
+
+.inputWrapper1 > input::placeholder {
+  color: rgba(17, 17, 17, 0.6);
+}
+.inputWrapper2 > input::placeholder {
+  color: rgba(17, 17, 17, 0.6);
+}
+.inputWrapper3 > textarea::placeholder {
+  color: rgba(17, 17, 17, 0.6);
+}
+.inputWrapper1 > input {
+  border-radius: 9.32px;
+  border: 1px solid rgba(17, 17, 17, 0.19);
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.13px; /* 200.93% */
+  padding: 12px 23px;
+  outline: none;
+}
+.inputWrapper2 > input {
+  border-radius: 9.32px;
+  border: 1px solid rgba(17, 17, 17, 0.19);
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.13px; /* 200.93% */
+  padding: 12px 23px;
+  outline: none;
+}
+.inputWrapper3 {
+  border-radius: 9.32px;
+  border: 1px solid rgba(17, 17, 17, 0.19);
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.13px; /* 200.93% */
+  padding: 15px 23px;
+  outline: none;
+  width: 100%;
+}
+.mainAppointmentWrapper {
+  align-items: center;
+}
+
+.btnSendMsg {
+  border-radius: 10px;
+  border: 1px solid #111;
+  color: #111;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 13px 24px;
+  margin-top: 10px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.btnSendMsg > svg {
+  font-size: 24px;
+}
+.formWrapperUpper1 {
+  margin-top: 17px;
+}
+.leftSideWrapper {
+}
+
+@media (max-width: 1399px) {
+  .day {
+    font-size: 13px;
+  }
+  .line {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1299px) {
+  .heading {
+    font-size: 18px;
+  }
+  .heading::before {
+    top: 12px;
+  }
+  .title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1199px) {
+  .day {
+    font-size: 11px;
+  }
+  .line {
+    font-size: 10px;
+  }
+  .time {
+    font-size: 11px;
+  }
+  .btnSendMsg {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 991px) {
+  .imgContainer > img {
+    width: 60%;
+  }
+  .leftSideWrapper {
+    text-align: center;
+  }
+
+  .textWrapper {
+    margin-top: 3rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .heading::before {
+    height: 2px;
+  }
+  .title {
+    font-size: 44px;
+  }
+}
+@media (max-width: 575px) {
+  .heading::before {
+    /* left: 126px; */
+    height: 2px;
+  }
+  .title {
+    font-size: 37px;
+  }
+}
+@media (max-width: 380px) {
+  .heading::before {
+    /* left: 126px; */
+    height: 2px;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
