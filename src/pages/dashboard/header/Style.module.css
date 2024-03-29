@@ -1,0 +1,14 @@
+.header{
+    background-color: #1E1E1E;
+    color: white;
+
+    padding: 20px;
+}
+.btn_doc {
+    background-color: white;
+    font-family: "Inter";
+    padding: 05px;
+    color: black;
+    border-radius: 05px;
+    float: right;
+  }

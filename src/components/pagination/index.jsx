@@ -1,50 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 import "./style.css";
-const PaginationComponent = ({
-  currentpage,
-  setCurrentpage,
-  numberpages,
-  numbers,
-}) => {
-  const prevpage = () => {
-    if (currentpage != 1) {
-      setCurrentpage(currentpage - 1);
+
+const Dots = () => {
+  return <li className="page-link">...</li>
+}
+
+const PaginationComponent = ({ totalPost, postPerPage, setCurrentPage, currentPage }) => {
+  const [start, setStart] = useState(0);
+  const [end, setEnd] = useState(3);
+  let pages = [];
+
+  for (let i = 1; i <= Math.ceil(totalPost / postPerPage); i++) {
+    pages.push(i)
+  }
+
+  const Prev = () => {
+    if (currentPage >= 2) {
+      setCurrentPage(currentPage - 1);
+      if (start > 0) { setStart(start - 1) }
+      if (end > 3) { setEnd(end - 1) }
     }
-  };
-  const changepage = (id) => {
-    setCurrentpage(id);
-  };
-  const Nextpage = () => {
-    if (currentpage !== numberpages) {
-      setCurrentpage(currentpage + 1);
+  }
+
+  const Next = () => {
+    if (currentPage < Math.round(totalPost / postPerPage)) {
+      setCurrentPage(currentPage + 1);
+      setStart(start + 1);
+      setEnd(end + 1);
     }
-  };
+  }
+  console.log(start, end);
+
   return (
     <div>
       <nav>
         <ul className="pagination">
           <li className="page-item">
-            <a className="page-link" onClick={prevpage}>
-              Previous
-            </a>
+            <Link className="page-link" onClick={Prev}>Previous</Link>
           </li>
-          {numbers.map((n, i) => (
-            <li className={`page-item  `} key={i}>
-              <a
-                className={`page-link ${
-                  currentpage === parseInt(n, 10) ? "active" : " "
-                } `}
-                onClick={() => changepage(parseInt(n))}
-              >
-                {n}
-              </a>
-            </li>
-          ))}
+          {currentPage > 1 && (<Dots />)}
+          {
+            pages.map((n) => (
+              <li key={n} className="page-item">
+                <Link className={`page-link ${currentPage === parseInt(n, 10) ? "active" : ""} `} onClick={() => setCurrentPage(parseInt(n))}>
+                  {n}
+                </Link>
+              </li>
+            )).slice(start, end)
+          }
+          {pages.length > 3 && (<Dots />)}
           <li className="page-item">
-            <a className="page-link" onClick={Nextpage}>
-              Nextpage
-            </a>
+            <Link className="page-link" onClick={Next}>Next</Link>
           </li>
         </ul>
       </nav>

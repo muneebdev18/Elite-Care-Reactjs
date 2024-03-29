@@ -1,10 +1,12 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import styles from "./styles.module.css";
 import Marker from "../../../assets/ContactUs-marker.png";
 import Phone from "../../../assets/ContactUs-cell.png";
 import Msg from "../../../assets/ContactUs-msg.png";
 import { GoArrowRight } from "react-icons/go";
-
+import { useDispatch,useSelector } from "react-redux";
+import { clearContactUs, postContactUsApi } from "../../../global/features/Webapp/contactUs/postContactUs";
+import { toast } from "react-toastify";
 const ContactForm = () => {
   const contacts = [
     {
@@ -26,6 +28,49 @@ const ContactForm = () => {
       details: "gendusarose@gmail.com",
     },
   ];
+const dispatch = useDispatch()
+const {data,success,message} = useSelector((value)=>value.postContactUs)
+  const [contactValue,setContactValue] = useState({
+    name:'',
+    phone:'',
+    email:'',
+    subject:'',
+    message:'',
+    credentialsSaved:false
+  })
+
+// Post Handler 
+
+const contactPostHandler = () =>{
+  dispatch(postContactUsApi(contactValue))
+}
+
+useEffect(()=>{
+if(success === true){
+  toast.success(message,{
+    position:"top-center"
+  })
+  dispatch(clearContactUs())
+  setContactValue({
+    name:'',
+    phone:'',
+    email:'',
+    subject:'',
+    message:'',
+    credentialsSaved:false
+  })
+}
+else if(success === null){
+  return;
+}
+else{
+  toast.error(message,{
+    position:"top-center"
+  })
+  dispatch(clearContactUs())
+
+}
+},[dispatch, message, success])
   return (
     <section className={styles.formSection}>
       <div className="container">
@@ -60,6 +105,8 @@ const ContactForm = () => {
                     name=""
                     id=""
                     placeholder="Enter Your Name"
+                    value={contactValue.name}
+                    onChange={(e)=>setContactValue({...contactValue,name:e.target.value})}
                   />
                 </div>
               </div>
@@ -71,6 +118,8 @@ const ContactForm = () => {
                     name=""
                     id=""
                     placeholder="Enter Your Phone"
+                    value={contactValue.phone}
+                    onChange={(e)=>setContactValue({...contactValue,phone:e.target.value})}
                   />
                 </div>
               </div>
@@ -85,6 +134,8 @@ const ContactForm = () => {
                     name=""
                     id=""
                     placeholder="Enter Your Email Address"
+                    value={contactValue.email}
+                    onChange={(e)=>setContactValue({...contactValue,email:e.target.value})}
                   />
                 </div>
               </div>
@@ -96,6 +147,8 @@ const ContactForm = () => {
                     name=""
                     id=""
                     placeholder="Subject"
+                    value={contactValue.subject}
+                    onChange={(e)=>setContactValue({...contactValue,subject:e.target.value})}
                   />
                 </div>
               </div>
@@ -111,6 +164,8 @@ const ContactForm = () => {
                     cols="30"
                     rows="7"
                     placeholder="Write Your Message Here"
+                    value={contactValue.message}
+                    onChange={(e)=>setContactValue({...contactValue,message:e.target.value})}
                   ></textarea>
                 </div>
               </div>
@@ -118,7 +173,9 @@ const ContactForm = () => {
             <div className={`row ${styles.agreeWrapper}`}>
               <div className="col-xl-12 col-lg-12 col-md-12">
                 <div className={styles.textWrapperCheckbox}>
-                  <input type="checkbox" name="" id="" />
+                  <input type="checkbox"   name="" id="" 
+                  value={contactValue.credentialsSaved} 
+                  onChange={(e)=>setContactValue({...contactValue,credentialsSaved:e.target.checked})} />
                   <p>
                     Save my name, email, and website in this browser for the
                     next time I comment.
@@ -128,7 +185,7 @@ const ContactForm = () => {
             </div>
             <div className={`row ${styles.btnWrapper}`}>
               <div className="col-xl-12 col-lg-12 col-md-12">
-                <button className={styles.btnSendMsg}>
+                <button onClick={contactPostHandler} className={styles.btnSendMsg}>
                   Send Message <GoArrowRight />
                 </button>
               </div>

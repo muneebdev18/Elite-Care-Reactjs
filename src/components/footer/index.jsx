@@ -24,14 +24,20 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="col-3 col-md-2 col-lg-3">
-                  <h4>Call Us</h4>
-                  <h4>Email</h4>
-                  <h4>Address</h4>
+                  <div className={Styles.text}>
+
+                    <h4>Call Us</h4>
+                    <h4>Email</h4>
+                    <h4>Address</h4>
+                  </div>
                 </div>
                 <div className="col-7 col-md-9 col-lg-8">
-                  <p>500520520</p>
-                  <p>Genduade@gmail.com</p>
-                  <p>3763 Harbor Light Road 94000 Zip code california</p>
+                  <div className={Styles.text}>
+                    <p>500520520</p>
+                    <p>Genduade@gmail.com</p>
+                    <p>3763 Harbor Light Road 94000 Zip code california</p>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -44,33 +50,33 @@ const Footer = () => {
                   <li>
                     <Link to={'/'}> Home </Link>
                   </li>
-                
+
                   <li>
-                     <Link to={'/'}> About Us </Link>
+                    <Link to={'/'}> About Us </Link>
                   </li>
                   <li>
-                     <Link to={'/'}> Services Offered </Link>
+                    <Link to={'/'}> Services Offered </Link>
                   </li>
                   <li>
-                     <Link to={'/'}> Surgical Aesthetics </Link>
+                    <Link to={'/'}> Surgical Aesthetics </Link>
                   </li>
                   <li>
-                     <Link to={'/'}> Non - Surgical Assthetics </Link>
+                    <Link to={'/'}> Non - Surgical Assthetics </Link>
                   </li>
                   <li>
-                     <Link to={'/'}> Dentist </Link>
+                    <Link to={'/'}> Dentist </Link>
                   </li>
                   <li>
-                     <Link to={'/'}> For Men  </Link>
+                    <Link to={'/'}> For Men  </Link>
                   </li>
                   <li>
-                     <Link to={'/'}> Transportation </Link>
+                    <Link to={'/'}> Transportation </Link>
                   </li>
                   <li>
-                     <Link to={'/'}> Blog </Link>
+                    <Link to={'/'}> Blog </Link>
                   </li>
                   <li>
-                     <Link to={'/'}> Contact Us </Link>
+                    <Link to={'/'}> Contact Us </Link>
                   </li>
                 </ul>
               </div>
@@ -125,18 +131,18 @@ const Footer = () => {
         </div>
       </div>
       <div className="container-fluid ">
-      <div className="d-flex justify-content-between mx-4 text-white  border-top pt-4" id={Styles.footerlast}>
-        <div>
-          <p>2024 Copy Right Elite Care All Rights Reserved </p>
-        </div>
-        <div>
-          <p>Terms And Condition | Privacy Policy</p>
+        <div className="d-flex justify-content-between mx-4 text-white  border-top pt-4" id={Styles.footerlast}>
+          <div>
+          <p>&copy; 2024 Elite Care</p>
+          </div>
+          <div>
+            <p > <span > <Link className={Styles.linkHover}  to={'/elite-care/termsandcondition'}> Terms And Condition </Link> </span> | <span> <Link className={Styles.linkHover}  to={'/elite-care/privacypolicy'}> Privacy Policy </Link></span></p>
+          </div>
         </div>
       </div>
-      </div>
-     
-    
-   
+
+
+
     </div>
   );
 };

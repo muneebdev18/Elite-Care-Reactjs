@@ -4,34 +4,16 @@ import RecentImg from "../../../assets/recentnews&article.png";
 import Card2 from "../../../assets/recentCard2.png";
 import Card3 from "../../../assets/recentCard3.png";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import useSWR from "swr";
+import {constants} from '../../../global/constants'
+import { Link } from "react-router-dom";
 const RecentNewsArticles = () => {
-  const cards = [
-    {
-      id: 1,
-      img: Card2,
-      date: "05 JAN 2024",
-      question:
-        "what is the hyperbaric oxygen therapy? What is the importance of this for after facial surgeries?",
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard.",
-    },
-    {
-      id: 2,
-      img: Card2,
-      date: "08 JAN 2024",
-      question: "Breast Therapy",
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing  industry. Lorem Ipsum has been the industry's standard.Lorem Ipsum.",
-    },
-    {
-      id: 3,
-      img: Card3,
-      date: "15 JAN 2024",
-      question: "General Repairs High Quality At Great Prices",
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing  industry.",
-    },
-  ];
+
+  
+  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  const {data, error, isLoading } = useSWR(`${constants.baseUrl}/api/blog?limit=3&page=1`,fetcher)
+const blogsData = data?.data?.results?.results
+
   return (
     <section className={styles.recentContainer}>
       <div className="container">
@@ -46,20 +28,28 @@ const RecentNewsArticles = () => {
           </div>
         </div>
         <div className={`row ${styles.bottomSection}`}>
-          {cards.map((item) => {
+          {blogsData?.map((item) => {
+
+const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+            const createdDate = new Date(item?.createdAt)
+            const day = createdDate.getDate()
+            const month = months[createdDate.getMonth()]
+            const year = createdDate.getFullYear()
+
+            const finalDate = `${day < 10 ? '0' + day : day} ${month} ${year}`
             return (
               <div className="col-xl-4 col-lg-4 col-md-4">
                 <div className={styles.bottomSectionWrapper}>
                   <div className={styles.cardWrapper}>
                     <div className={styles.cardImg}>
-                      <img src={item.img} alt="" />
+                      <img src={item?.image?.imageUrl} alt={item?.image?.imageName} />
                     </div>
                     <div className={styles.cardContentWrapper}>
-                      <p className={styles.date}>{item.date}</p>
-                      <p className={styles.question}>{item.question}</p>
-                      <p className={styles.answer}>{item.answer}</p>
+                      <p className={styles.date}>{finalDate}</p>
+                      <p className={styles.question}>{item.title}</p>
+                      <p className={styles.answer}>{item?.description?.slice(0,150)}</p>
                       <div className={styles.readMoreWrapper}>
-                        <p>READ MORE</p>
+                        <Link to={"/elite-care/blog"} >READ MORE</Link>
                         <HiOutlineArrowNarrowRight />
                       </div>
                     </div>
@@ -67,7 +57,7 @@ const RecentNewsArticles = () => {
                 </div>
               </div>
             );
-          })}
+          }).slice(0,3)}
         </div>
       </div>
     </section>

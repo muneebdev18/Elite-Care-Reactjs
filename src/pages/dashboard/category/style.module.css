@@ -1,0 +1,33 @@
+.btn_doc button {
+    background-color: #1E1E1E;
+    margin-top: 20px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 05px;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    font-family: "Inter";
+  }
+  .sidecolor {
+    background-color: #1E1E1E;
+    flex: 1;
+    min-height: 100vh;
+  }
+  .profilecard{
+    /* border: 1px solid rgb(234, 227, 227); */
+    border-radius: 10px;
+    background-color: rgb(246, 246, 245);
+    
+    margin-top: 40px;
+    padding: 30px;
+    float: left;
+    font-family: "Inter";
+    }
+
+    .profiletext p{
+    line-height: 40px;
+    }
+    .profiletext{
+     margin-top: 20px;
+    }

@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar";
-import styles from "./style.module.css";
-import logo from "../../assets/transportation-home.png";
+import logo from "../../assets/transportation-home.webp";
 import TransportationCard from "./transporationCard";
 import Footer from "../../components/footer";
 const Transportation = () => {

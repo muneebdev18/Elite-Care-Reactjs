@@ -1,17 +1,12 @@
 import React from "react";
 import Navbar from "../../components/navbar";
-import styles from "./style.module.css";
-import logo from "../../assets/Dentist.png";
+import useSWR from "swr";
+import logo from "../../assets/Dentist.webp";
 import ShowCasesComponent from "../../components/showCasesComp";
 import DentistServices from "../../components/dentistServices";
 import ImageComparison from "../../components/Imagecomparison/ImageCamparison";
 import Footer from "../../components/footer";
-// Denstist Services Images
-
-import dentist1 from "../../assets/denist1.png";
-import dentist2 from "../../assets/denist2.png";
-import dentist3 from "../../assets/denist3.png";
-import dentist4 from "../../assets/denist4.png";
+import { constants } from '../../global/constants'
 
 // Image Compare Imgs
 import beforeImg from "../../assets/dentistBefore.png";
@@ -25,7 +20,7 @@ import ShowCase3 from "../../assets/dentistShowcase3.png";
 import ShowCase4 from "../../assets/dentistShowcase4.png";
 
 const Dentist = () => {
-  const data = {
+  const Navdata = {
     h1: null,
     h2: "DENTIST",
     h3: null,
@@ -41,42 +36,18 @@ const Dentist = () => {
     img3: ShowCase3,
     img4: ShowCase4,
   };
-  // denist services data
 
-  const carddata = {
-    mainheading: "SERVICES",
-    mainHeadingtwo: "THE COSMETIC DENTISTRY PROCEDURES",
-    card: [
-      {
-        image: dentist1,
-        heading1: "Misaligned Teeth",
-        para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harumqui nihil quos sequi, quam cumque consectetur fugit, ipsamveritatis iure eaque? Harum quam ipsa, esse minima aspernaturiste reprehenderit cupiditate.",
-      },
-      {
-        image: dentist2,
-        heading1: "Chipped Or Creacked Teeth",
-        para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harumqui nihil quos sequi, quam cumque consectetur fugit, ipsamveritatis iure eaque? Harum quam ipsa, esse minima aspernaturiste reprehenderit cupiditate.",
-      },
-      {
-        image: dentist3,
-        heading1: "Regular Dental Cleaning",
-        para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harumqui nihil quos sequi, quam cumque consectetur fugit, ipsamveritatis iure eaque? Harum quam ipsa, esse minima aspernaturiste reprehenderit cupiditate.",
-      },
-      {
-        image: dentist4,
-        heading1: "Dental Filling For Cavities",
-        para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harumqui nihil quos sequi, quam cumque consectetur fugit, ipsamveritatis iure eaque? Harum quam ipsa, esse minima aspernaturiste reprehenderit cupiditate.",
-      },
-    ],
-  };
 
+  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  const { data, error, isLoading } = useSWR(`${constants.baseUrl}api/services?pagename=dentist`, fetcher)
+  const serviceData = data?.data?.results?.results
   const topImage = { src: beforeImg, alt: "Before" };
   const bottomImage = { src: afterImg, alt: "After" };
   return (
     <>
-      <Navbar data={data} />
+      <Navbar data={Navdata} />
       <ShowCasesComponent showCaseImgs={showCaseImgs} />
-      <DentistServices carddata={carddata} />
+      <DentistServices carddata={serviceData} head1="SERVICES" head2="THE COSMETIC DENTISTRY PROCEDURES" />
       <ImageComparison topImage={topImage} bottomImage={bottomImage} />
       <Footer />
     </>

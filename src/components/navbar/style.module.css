@@ -1,9 +1,3 @@
-/* .navContainer {
-  background-image: url("../../assets/homebgmain.png");
-  background-size: cover;
-  height: 865px;
-  background-repeat: no-repeat;
-} */
 .upperText svg {
   transition: 0.7s;
 }
@@ -12,6 +6,19 @@
   transform: translateY(-10px) rotate(-35deg);
 }
 
+
+.email:hover{
+  color: #d4ae3d;
+}
+.phone:hover{
+  color: #d4ae3d;
+}
+.address:hover{
+  color: #d4ae3d;
+}
+.hoverLinks:hover{
+  color: #d4ae3d;
+}
 .mobupperText svg {
   transition: 0.7s;
 }
@@ -19,8 +26,7 @@
   color: #d4ae3d;
   transform: translateY(-10px) rotate(-35deg);
 }
-.newNavbarRowWrapper {
-}
+
 .navContainer {
   height: 865px;
 }
@@ -160,22 +166,22 @@
 }
 .welcome::before {
   position: absolute;
-  width: 70px;
+  width: 130px;
   content: "";
   height: 2px;
   background-color: white;
-  top: 13px;
-  left: 148px;
+  top: 14px;
+  left: 58px;
 }
 
 .welcome::after {
   position: absolute;
-  width: 70px;
+  width: 130px;
   content: "";
   height: 2px;
   background-color: white;
   top: 13px;
-  right: 148px;
+  right: 58px;
 }
 .navButton {
   background-color: transparent;
@@ -200,7 +206,7 @@
 .titleNav1,
 .titleNav2 {
   font-size: 60px;
-  font-family: "Antic Didone";
+  font-family: var(--Antic);
   color: var(--text);
   line-height: 70px;
 }
@@ -402,11 +408,16 @@
   .titleNav2 {
     font-size: 50px;
   }
+  .welcome{
+    font-size: 18px !important;
+  }
   .welcome::before {
-    left: 100px;
+    left: 50px;
+    width: 100px;
   }
   .welcome::after {
-    right: 100px;
+    right: 50px;
+    width: 100px;
   }
 }
 
@@ -419,14 +430,15 @@
     font-size: 17px !important;
   }
   .welcome::before {
-    left: 60px;
-    top: 10px;
-    width: 57px;
-  }
+    left: 26px;
+    top: 12px;
+    width: 75px;
+}
+  
   .welcome::after {
-    right: 60px;
-    top: 10px;
-    width: 57px;
+    right: 26px;
+    top: 12px;
+    width: 75px;
   }
 }
 @media (max-width: 509px) {
@@ -434,13 +446,19 @@
   .titleNav2 {
     font-size: 30px;
   }
+  .welcome {
+    font-size: 16px !important;
+  }
   .welcome::before {
     left: -5px;
     width: 60px;
+    top: 11px;
   }
   .welcome::after {
     right: -5px;
     width: 60px;
+    top: 11px;
+
   }
   .logo {
     font-size: 2rem;
@@ -454,15 +472,15 @@
     line-height: 50px;
   }
   .welcome {
-    font-size: 15px !important;
+    font-size: 14px !important;
   }
   .welcome::before {
-    left: -10px;
+    left: -20px;
     width: 44px;
     top: 9px;
   }
   .welcome::after {
-    right: -10px;
+    right: -20px;
     width: 44px;
     top: 9px;
   }

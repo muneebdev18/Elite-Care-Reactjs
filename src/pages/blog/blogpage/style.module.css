@@ -1,5 +1,5 @@
 .textblog {
-  margin: 20px 0px 20px 0px;
+  margin: 28px 0px 29px 0px
 }
 .textblog button {
   border: 1px solid black;
@@ -52,8 +52,15 @@ p {
 }
 
 .category ul li {
-  margin: 20px 0px;
+margin-top: 12px !important;
+margin-bottom: 15px !important;
   border-bottom: 1px solid rgb(205, 205, 205);
+}
+.dateWrapper{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 9px 0px;
 }
 .blog {
   background-color: #f7eed3;
@@ -66,10 +73,24 @@ p {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 20px 10px;
+  padding: 13px 10px;
   gap: 20px;
  
 }
+.dateHeading{
+  display: flex;
+  align-items: center;
+  margin-left: -20px;
+  margin-bottom: 13px !important;
+}
+.blogTitle{
+  margin-bottom: 13px !important;
+}
+.blogDesc{
+  margin-bottom: 19px !important;
+  
+}
+.p
 .latestblog h6 {
   font-family: "Antic Didone";
   font-weight: 800;
@@ -91,8 +112,8 @@ p {
   padding: 20px;
 }
 .populartag span {
-  margin: 04px;
-  padding: 5px;
+  margin: 2px;
+  padding: 3px;
   border-radius: 10px;
   background-color: white;
 }
@@ -101,6 +122,7 @@ p {
   text-decoration: none;
   margin-bottom: 10px;
   color: black;
+  margin: 12px;
 
   /* margin: 10px; */
 }

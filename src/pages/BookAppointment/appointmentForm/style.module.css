@@ -127,6 +127,13 @@
   gap: 10px;
   display: flex;
   align-items: center;
+  outline: none;
+}
+.btnSendMsg:hover{
+  background-color: #d4ae3d;
+  color: white;
+  border-color: transparent;
+
 }
 .btnSendMsg > svg {
   font-size: 24px;

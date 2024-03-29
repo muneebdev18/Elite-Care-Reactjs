@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { ReactComponent as Divider } from "../../assets/divider.svg";
-import styles from "./Style.module.css";
+import styles from "./style.module.css";
 
 const ImageComparison = ({ topImage, bottomImage }) => {
   const [isResizing, setIsResizing] = useState(false);

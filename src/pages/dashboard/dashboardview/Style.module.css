@@ -1,0 +1,37 @@
+.widthdiv{
+    height: 100vh;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.maindiv{
+    margin-top: 50px;
+    font-family: "Inter";
+}
+.positive{
+    color: green;
+}
+.count{
+    font-size: 24px;
+    font-weight: 500;
+}
+.detail{
+    font-size: 14px;
+    font-weight: 300;
+}
+.card{
+    /* border: 1px solid rgb(46, 44, 44); */
+    border-radius: 10px ;
+    background-color: rgb(227, 225, 225);
+    padding: 10px 25px;
+    box-shadow: 2px 02px 05px 1px;
+}
+.sidecolor{
+    background-color: #1E1E1E;
+  
+    height: 800px;
+
+}

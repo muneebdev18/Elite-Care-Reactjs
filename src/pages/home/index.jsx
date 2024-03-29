@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar";
-import logo from "../../assets/homebgmain.png";
+import logo from "../../assets/homebgmain.webp";
 import Footer from "../../components/footer";
 import ShowCasesComponent from "../../components/showCasesComp";
 import Services from "./services";

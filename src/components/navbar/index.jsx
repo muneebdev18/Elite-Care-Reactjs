@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react";
-import styles from "./style.module.css";
+
 import { FaFacebook } from "react-icons/fa6";
 import { TiSocialInstagram } from "react-icons/ti";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import ScrollWheel from "../../assets/scrollWheel.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 import { FaEnvelope } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import styles from "./style.module.css";
 
 const Navbar = ({ data }) => {
   const [isActive, setIsActive] = useState(false);
-  const param = useParams();
-  console.log(param);
+  const currUser = JSON.parse(localStorage.getItem('user'));
   const links = [
     {
       id: 1,
@@ -70,10 +68,11 @@ const Navbar = ({ data }) => {
     },
     {
       id: 11,
-      text: "Login",
-      url: "/elite-care/login",
-    },
-  ];
+      text: currUser === null && currUser?.data?.role !== "admin" ? "Login" : "",
+      url: currUser === null && currUser?.data?.role !== "admin" ? "/elite-care/login" : ""
+    }
+  ]
+
   const clickHandler = () => {
     setIsActive(!isActive);
   };
@@ -94,7 +93,8 @@ const Navbar = ({ data }) => {
     backgroundImage: `url(${data.image})`,
     backgroundSize: "cover",
     backgroundRepeat: " no-repeat",
-  };
+  }
+
   return (
     <nav className={styles.navContainer}>
       <div className="container-fluid">
@@ -110,7 +110,6 @@ const Navbar = ({ data }) => {
                 </div>
               </div>
               <div className="col-xl-9 col-lg-9 col-md-1 col-sm-1 col-xs-1">
-                {/* <div className={styles.mobileNavbarWrapper}></div> */}
                 <div className={styles.navWholeWrapper}>
                   <GiHamburgerMenu
                     onClick={() => clickHandler()}
@@ -118,13 +117,14 @@ const Navbar = ({ data }) => {
                   />
                   <div className={styles.rightSide}>
                     <div className={styles.upperSection}>
-                      <p className={`${styles.email} ${styles.upperText}`}>
+                      <p  onClick={() => window.open("mailto://Gendusarose@gmail.com", "_blank")} style={{ cursor: "pointer" }} className={`${styles.email} ${styles.upperText}`}>
                         <FaEnvelope /> Gendusarose@gmail.com
                       </p>
-                      <p className={`${styles.phone} ${styles.upperText}`}>
+                      <p onClick={() => window.open('tel://40989989899', '_blank')} style={{ cursor: "pointer" }} className={`${styles.phone} ${styles.upperText}`}>
                         <FaPhone /> 40989989899
                       </p>
-                      <p className={`${styles.address} ${styles.upperText}`}>
+                      <p style={{ cursor: "pointer" }}
+                        onClick={() => window.open('https://www.google.com/maps/search/37852+Harbour+Light+Road+Zip+Code+California/@37.5166733,-122.0524836,17z/data=!3m1!4b1?entry=ttu', "_blank")} className={`${styles.address} ${styles.upperText}`}>
                         <FaMapMarkerAlt /> 37852 Harbour Light Road Zip Code
                         California
                       </p>
@@ -144,21 +144,26 @@ const Navbar = ({ data }) => {
                     </div>
                     <div className={styles.bottomSection}>
                       <div className={styles.linksWrapper}>
-                        {links.map((item) => {
-                          return (
-                            <>
-                              <NavLink
-                                className={({ isActive, isPending }) =>
-                                  isActive && "fw-20"
-                                }
-                                key={item.id}
-                                to={item.url}
-                              >
-                                {item.text}
-                              </NavLink>
-                            </>
-                          );
-                        })}
+                        {
+                          links.map((item) => {
+                            return (
+                              <>
+                                <Link
+                                  className={styles.hoverLinks}
+                                  key={item.id}
+                                  to={item.url}
+                                >
+                                  {item.text}
+                                </Link>
+                              </>
+                            );
+                          })
+                        }
+                        {
+                          currUser && currUser?.data?.role === "admin" && (
+                            <Link  className={styles.hoverLinks} to={"/elite-care/dashboard/home"}>Dashboard</Link>
+                          )
+                        }
                       </div>
                     </div>
                   </div>
@@ -169,15 +174,17 @@ const Navbar = ({ data }) => {
                   <div className={`row ${styles.mobNavbarWrapper}`}>
                     <div className={`col ${styles.mobLeftSide}`}>
                       <div className={styles.moblinksWrapper}>
-                        {links.map((item) => {
-                          return (
-                            <>
-                              <Link key={item.id} to={item.url}>
-                                {item.text}
-                              </Link>
-                            </>
-                          );
-                        })}
+                        {
+                          links.map((item) => {
+                            return (
+                              <>
+                                <Link key={item.id} to={item.url}>
+                                  {item.text}
+                                </Link>
+                              </>
+                            );
+                          })
+                        }
                       </div>
                       <div
                         style={{

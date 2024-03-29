@@ -27,7 +27,7 @@ function WhoWeAre() {
             <div className={styles.chooseCont}>
               <h4>Who We Are</h4>
               <h1>Why Choose Elite Care</h1>
-              <p>
+              <p className={styles.whoPara}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley

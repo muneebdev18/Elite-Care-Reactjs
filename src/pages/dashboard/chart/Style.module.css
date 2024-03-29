@@ -1,0 +1,17 @@
+.maindiv{
+    height: 300px;
+    background-color: rgb(244, 240, 240);
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 2px 02px 05px 1px;
+    border-radius: 10px;
+}
+.charts{
+    margin-top: 10px;
+
+}
+.title{
+    font-weight: 200;
+    color: #000;
+    margin-bottom: 20px;
+}

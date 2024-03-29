@@ -3,18 +3,18 @@ import Navbar from "../../components/navbar";
 import Aesthetic from "../../components/asthetics";
 import Footer from "../../components/footer";
 
-import Surgical from "../../assets/Non-SurgicalAesthetics.png";
+import Surgical from "../../assets/Non-SurgicalAesthetics.webp";
 
 const NonSurgicalAsthetics = () => {
   const data = {
-    h1: "WELCOME TO ELITE CARE",
-    h2: "ENHANCE YOUR BEAUTY ",
-    h3: "WITH PLASTIC SURGERY",
+    h1: null,
+    h2: "NON-SURGICAL AESTHETICS",
+    h3: null,
     image: Surgical,
-    height: "865px",
-    imgTop: "460px",
+    button: null,
+    height: "675px",
+    imgTop: "165px",
   };
-
   return (
     <>
       <Navbar data={data} />

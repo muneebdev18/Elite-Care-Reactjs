@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./style.module.css";
 import SurgicalAstheticsComp from "../../components/SurgicalAstheticsComp";
 import Navbar from "../../components/navbar";
-import logo from "../../assets/surgicalAst.png";
+import logo from "../../assets/surgicalAst.webp";
 import Footer from "../../components/footer";
 const SurgicalAsthetics = () => {
   const data = {

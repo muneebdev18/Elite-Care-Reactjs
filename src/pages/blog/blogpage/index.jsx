@@ -1,141 +1,120 @@
 import styles from "./style.module.css";
 import { HiArrowLongRight } from "react-icons/hi2";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Retangleblog1 from "../../../assets/Rectangle1.png";
 import Retangleblog2 from "../../../assets/Rectangle2.png";
 import Retangleblog3 from "../../../assets/Rectangle3.png";
 import PaginationComponent from "../../../components/pagination";
-
-
 import { SlCalender } from "react-icons/sl";
 import { Link } from "react-router-dom";
-
+import { useDispatch, useSelector } from "react-redux";
+import { getblogs } from "../../../global/features/Dashboard/blogsSlice/GetBlogs";
+import Loader from "../../../components/Loader";
+import useSWR from "swr";
+import { constants } from '../../../global/constants'
 const BlogPage = () => {
-  const date = new Date();
-  const todaydate = date.getDay();
-  const todaymonth = date.getMonth();
-  const todayyeaer = date.getFullYear();
-  const all = `${todaydate} , ${todaymonth} ,  ${todayyeaer}`;
 
-  const data = [
-    {
-      Id: 1,
-      date: all,
-      title: "Beauty can be preserved and we will tell you how improve",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 2,
-      date: all,
-      title: "Four ways a clean workplace makes employees happy and healthy",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 3,
-      date: all,
-      title: "How to clean your home faster and more efficiently",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 4,
-      date: all,
-      title: "Beauty can be preserved and we will tell you how improve",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 5,
-      date: all,
-      title: "How to clean your home faster and more efficiently",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 6,
-      date: all,
-      title: "Four ways a clean workplace makes employees happy and healthy",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 7,
-      date: all,
-      title: "Beauty can be preserved and we will tell you how improve",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 8,
-      date: all,
-      title: "Beauty can be preserved and we will tell you how improve",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 9,
-      date: all,
-      title: "How to clean your home faster and more efficiently",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 10,
-      date: all,
-      title: "Beauty can be preserved and we will tell you how improve",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 11,
-      date: all,
-      title: "Beauty can be preserved and we will tell you how improve",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 12,
-      date: all,
-      title: "Four ways a clean workplace makes employees happy and healthy",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-    {
-      Id: 13,
-      date: all,
-      title: "How to clean your home faster and more efficiently",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores dolor, obcaecati blanditiis sed iure soluta deleniti sint neque possimus veniam, quos nam numquam consequuntur, praesentium iste temporibus voluptatem dolore!",
-    },
-  ];
+
+  const dispatch = useDispatch();
+  const { data, loading } = useSelector((state) => state.blogs);
   const [currentpage, setCurrentpage] = useState(1);
-  const recordPage = 3;
-  const lastindex = currentpage * recordPage;
-  const firstindex = lastindex - recordPage;
-  const records = data.slice(firstindex, lastindex);
+  const [limit, setLimit] = useState(3);
 
-  const numberpages = Math.ceil(data.length / recordPage);
+  
+  // Category Data
+  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  const { data: catData } = useSWR(`${constants.baseUrl}/api/blog/bycategory`, fetcher)
+  const categoryData = catData?.data
 
-  const numbers = Array.from({ length: numberpages }, (_, index) =>
-    (index + 1).toString().padStart(2, "0")
-  );
 
+  // Token
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  let token = user?.data?.refreshToken;
+
+  // All Blogs Data 
+  const fetcherWithToken = async (url, token, ...args) => {
+    const response = await fetch(url, {
+      ...args,
+      headers: {
+        ...args.headers,
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.json();
+  };
+  const { data: blogData, isLoading } = useSWR([`${constants.baseUrl}api/blog?limit=${limit}&page=${currentpage}`, token], fetcherWithToken);
+  const paginateData = blogData?.data?.count
+  const tempData = blogData?.data?.results?.results
+
+ 
+
+  // GET  LATEST FROM BLOG
+
+  const { data: getPopularData } = useSWR([`${constants.baseUrl}api/blog?limit=3&page=1`, token], fetcherWithToken);
+  const popularData = getPopularData?.data?.results?.results
+  console.log("popular Data",popularData);
   return (
     <div className="container">
       <div className="row">
         <div className="col-12 col-md-8 col-lg-8">
           <div className="row">
-            {records.map((items, index) => (
-              <div key={index} className="col-12">
-                <div className={styles.textblog}>
-                  <h6>
-                    <SlCalender style={{ margin: "0px 20px" }} />
-                    {items.date}
-                  </h6>
-                  <h1>{items.title}</h1>
-                  <p>{items.des}</p>
-                  <button className="btn">
-                    Read More <HiArrowLongRight size={28} />
-                  </button>
-                </div>
-              </div>
-            ))}
+            {isLoading ? (
+              <Loader />
+            ) : (
+              tempData?.map((items, index) => {
+                const months = [
+                  "JAN",
+                  "FEB",
+                  "MAR",
+                  "APR",
+                  "MAY",
+                  "JUN",
+                  "JUL",
+                  "AUG",
+                  "SEP",
+                  "OCT",
+                  "NOV",
+                  "DEC",
+                ];
+                const createdDate = new Date(items?.createdAt);
+                const day = createdDate.getDate();
+                const month = months[createdDate.getMonth()];
+                const year = createdDate.getFullYear();
+
+                const finalDate = `${day < 10 ? "0" + day : day
+                  } ${month} ${year}`;
+                return (
+                  <div key={index} className="col-12">
+                    <div className={styles.textblog}>
+                      <h6 className={styles.dateHeading} style={{display:"flex",alignItems:"center",marginLeft:"-20px",marginBottom:"13px !important"}}>
+                        <SlCalender style={{ margin: "0px 20px" }} />
+                        {finalDate}
+                      </h6>
+                      <h1 className={styles.blogTitle}>{items.title}</h1>
+                      {/* <p className={styles.blogDesc}>{items?.description?.slice(0, 500)}</p> */}
+                      <p
+                       className={styles.blogDesc}
+                        dangerouslySetInnerHTML={{ __html: items?.description?.slice(0, 300) }}
+                      ></p>
+                      <button className="btn">
+                        Read More <HiArrowLongRight size={28} />
+                      </button>
+                    </div>
+                  </div>
+                );
+              })
+            )}
           </div>
-          <PaginationComponent
-            currentpage={currentpage}
-            setCurrentpage={setCurrentpage}
-            numberpages={numberpages}
-            numbers={numbers}
-          />
+          {
+            isLoading ? "" : <PaginationComponent
+              totalPost={paginateData}
+              postPerPage={limit}
+              setCurrentPage={setCurrentpage}
+              currentPage={currentpage}
+            />
+          }
+
         </div>
         <div className="col-12 col-md-4 col-lg-4">
           <div className={styles.searchbar}>
@@ -146,134 +125,84 @@ const BlogPage = () => {
             <div className="mx-3">
               <h4>CATEGORY</h4>
               <ul>
-                <li>
-                  <div className="d-flex justify-content-between">
-                    <div>
-                      <span>Plactic Surgery</span>
-                    </div>
-                    <div>
-                      <span>(14)</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="d-flex justify-content-between">
-                    <div>
-                      <span>Liposaction</span>
-                    </div>
-                    <div>
-                      <span>(12)</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="d-flex justify-content-between">
-                    <div>
-                      <span>Breat Implant</span>
-                    </div>
-                    <div>
-                      <span>(18)</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="d-flex justify-content-between">
-                    <div>
-                      <span>Pender Unity</span>
-                    </div>
-                    <div>
-                      <span>(8)</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="d-flex justify-content-between">
-                    <div>
-                      {" "}
-                      <span>Non surgical</span>
-                    </div>
-                    <div>
-                      {" "}
-                      <span>(28)</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="d-flex justify-content-between">
-                    <div>
-                    
-                      <span>Nose Reshaping</span>
-                    </div>
-                    <div>
-                     
-                      <span>(9)</span>
-                    </div>
-                  </div>
-                </li>
+                {
+                  categoryData?.map((items, index) => {
+                    return (
+                      <li>
+                        <div key={index} className="d-flex justify-content-between">
+                          <div>
+                            <span>{items?.category_info}</span>
+                          </div>
+                          <div>
+                            <span>({items?.count})</span>
+                          </div>
+                        </div>
+                      </li>
+                    );
+                  }).slice(0, 6)
+                }
               </ul>
             </div>
           </div>
           <div className={styles.blog}>
             <h4>LATEST FROM BLOG</h4>
-            <div className={styles.latestblog}>
-              <div className={styles.imgagesdiv}>
-                <img src={Retangleblog1} />
-              </div>
-              <div>
-                <h6>Recapture the beauty self-confidence </h6>
-                <SlCalender />
-                <span>{all}</span>
-              </div>
-            </div>
-            <div className={styles.latestblog}>
-              <div className={styles.imgagesdiv}>
-                <img src={Retangleblog2} />
-              </div>
-              <div>
-                <h6>when you feel good we feel good </h6>
-                <SlCalender />
-                <span>{all}</span>
-              </div>
-            </div>
-            <div className={styles.latestblog}>
-              <div className={styles.imgagesdiv}>
-                <img src={Retangleblog3} />
-              </div>
-              <div>
-                <h6>Refresh your image to beauty </h6>
-                <SlCalender />
-                <span>{all}</span>
-              </div>
-            </div>
+            {
+              popularData?.map((item, index) => {
+                const months = [
+                  "JAN",
+                  "FEB",
+                  "MAR",
+                  "APR",
+                  "MAY",
+                  "JUN",
+                  "JUL",
+                  "AUG",
+                  "SEP",
+                  "OCT",
+                  "NOV",
+                  "DEC",
+                ];
+                const createdDate = new Date(item?.createdAt);
+                const day = createdDate.getDate();
+                const month = months[createdDate.getMonth()];
+                const year = createdDate.getFullYear();
+
+                const finalDate = `${day < 10 ? "0" + day : day
+                  } ${month} ${year}`;
+                return (
+                  <div key={index} className={styles.latestblog}>
+                    <div className={styles.imgagesdiv}>
+                      <img src={item?.image?.imageUrl} alt={item?.image?.imageName} />
+                    </div>
+                    <div>
+                      <h6>{item?.title}</h6>
+                      <div className={styles.dateWrapper}>
+                        <SlCalender />
+                        <span>{finalDate}</span>
+                      </div>
+                    </div>
+                  </div>
+                )
+              }).slice(0, 3)
+            }
+
           </div>
           <div className={styles.populartag}>
             <h4>POPULAR TAG</h4>
-            <div>
-              <span>
-                <Link to="#">Cosmetic </Link>
-              </span>
-              <span>
-                <Link to="#">Non surgical </Link>
-              </span>
-              <span>
-                <Link to="#">Medical </Link>
-              </span>
-              <span>
-                <Link to="#">Brest implent </Link>
-              </span>
-              <span>
-                <Link to="#">Surgery </Link>
-              </span>
-              <span>
-                <Link to="#">Medical </Link>
-              </span>
-              <span>
-                <Link to="#">Brest implent </Link>
-              </span>
-              <span>
-                <Link to="#">Surgery </Link>
-              </span>
-            </div>
+            <div  className={styles.populartaglink}>
+            {
+              categoryData?.map((item) => {
+                return (
+                  
+                    <span key={item._id}>
+                      <Link to="/elite-care/blog">{item?.category_info}</Link>
+                    </span>
+                  
+                  )
+                })
+              }
+              </div>
+
           </div>
         </div>
       </div>

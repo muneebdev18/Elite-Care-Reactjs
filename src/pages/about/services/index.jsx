@@ -1,32 +1,12 @@
 import React from "react";
 import styles from "./style.module.css";
-import img1 from "../../../assets/about1.png";
-import img2 from "../../../assets/hotel-about.png";
-import img3 from "../../../assets/transport-about.png";
+import { constants } from "../../../global/constants";
+import useSWR from "swr";
 const Services = () => {
-  const cardData = [
-    {
-      id: 1,
-      img: img1,
-      title: "Flight",
-      price: "40.00",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-    },
-    {
-      id: 2,
-      img: img2,
-      title: "Hotel",
-      price: "50.00",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-    },
-    {
-      id: 3,
-      img: img3,
-      title: "Transport",
-      price: "80.00",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ",
-    },
-  ];
+
+  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  const { data, error, isLoading } = useSWR(`${constants.baseUrl}api/services?pagename=about`, fetcher) 
+const aboutData = data?.data?.results?.results
   return (
     <div className={styles.fristWrapper}>
       <div className="container">
@@ -40,24 +20,24 @@ const Services = () => {
             </div>
           </div>
 
-          {cardData.map((item) => {
+          {aboutData?.map((item) => {
             return (
               <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 <div key={item.id} className={styles.cardWrapper}>
                   <div className={styles.cdimg}>
-                    <img src={item.img} className="img-fluid" />
+                    <img src={item?.image?.imageUrl} alt={item?.image?.imageName} className="img-fluid" />
                   </div>
                   <div className={styles.cardWrappertxt}>
                     <div className={styles.hdAmt}>
-                      <h3>{item.title}</h3>
+                      <h3>{item.serviceName}</h3>
                       <h3>${item.price}</h3>
                     </div>
-                    <p>{item.text}</p>
+                    <p>{item?.description?.slice(0,100)}</p>
                   </div>
                 </div>
               </div>
             );
-          })}
+          }).slice(0,3)}
         </div>
       </div>
     </div>

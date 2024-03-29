@@ -1,55 +1,15 @@
 import React from "react";
 import styles from "./style.module.css";
-import ServicesImg from "../../../assets/services.png";
-import img1 from "../../../assets/services1.png";
-import img2 from "../../../assets/services2.png";
-import img3 from "../../../assets/services3.png";
-import img4 from "../../../assets/services4.png";
-import img5 from "../../../assets/services5.png";
 import Arrow from "../../../assets/rightArrow.png";
+import useSWR from 'swr'
+import {constants} from '../../../global/constants'
 const Services = () => {
-  const servicesImg = [
-    {
-      id: 1,
-      img: img1,
-      text: "READ MORE",
-      arrowImg: Arrow,
-      place: "ANTALYA",
-      price: "$1250",
-    },
-    {
-      id: 2,
-      img: img2,
-      text: "READ MORE",
-      arrowImg: Arrow,
-      place: "ISTANBUL",
-      price: "$1250",
-    },
-    {
-      id: 3,
-      img: img3,
-      text: "READ MORE",
-      arrowImg: Arrow,
-      place: "ALANYA",
-      price: "$1250",
-    },
-    {
-      id: 4,
-      img: img4,
-      text: "READ MORE",
-      arrowImg: Arrow,
-      place: "ANKARA",
-      price: "$1250",
-    },
-    {
-      id: 5,
-      img: img5,
-      text: "READ MORE",
-      arrowImg: Arrow,
-      place: "BUSRA",
-      price: "$1250",
-    },
-  ];
+
+  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  const { data, error, isLoading } = useSWR(`${constants.baseUrl}api/services?pagename=home&page=1&limit=10`, fetcher)
+  const serviceData = data?.data?.results?.results
+  console.log(serviceData);
+
   return (
     <section className={styles.servicesWrapper}>
       <div className={`container-fluid`}>
@@ -57,36 +17,33 @@ const Services = () => {
           <div className="col-xl-12 col-lg-12 col-md-12">
             <div className={styles.ServicesUpperSection}>
               <div className={styles.servicesImgWrapper}>
-                {/* <img src={ServicesImg} alt='sevices'/> */}
                 <p>SERVICES</p>
               </div>
               <p className={styles.title}>tourism in Turkey</p>
             </div>
           </div>
         </div>
-        {/* img section */}
-
         <div className={`row ${styles.serviceImgWrapperRow}`}>
-          {servicesImg &&
-            servicesImg.map((item) => {
+          {serviceData &&
+            serviceData.map((item) => {
               return (
                 <div className="col">
                   <div className={styles.imgWrapper}>
                     <div className={styles.servicesCardImgsWrapper}>
-                      <img src={item.img} />
+                      <img src={item?.image?.imageUrl} />
                     </div>
                     <div className={styles.descWrapper}>
-                      <p className={styles.place}>{item.place}</p>
-                      <p className={styles.price}>{item.price}</p>
+                      <p className={styles.place}>{item.serviceName}</p>
+                      <p className={styles.price}>${item.price}</p>
                       <div className={styles.readMore}>
-                        <p>{item.text}</p>
-                        <img src={item.arrowImg} alt="arrow" />
+                        <p>READ MORE</p>
+                        <img src={Arrow} alt="arrow" />
                       </div>
                     </div>
                   </div>
                 </div>
               );
-            })}
+            }).slice(0,5)}
         </div>
       </div>
     </section>

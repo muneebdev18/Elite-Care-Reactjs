@@ -27,10 +27,11 @@
   font-weight: 600 !important;
   font-size: 20.1px;
   font-style: normal;
-  font-weight: 500;
+  /* font-weight: 500; */
   line-height: normal;
   letter-spacing: 3px;
   text-transform: uppercase;
+  font-family: var(--Inter);
 }
 .showCase > p::before {
   content: "";
@@ -58,7 +59,7 @@
   font-style: normal;
   line-height: 100.6%; /* 70.42px */
   text-transform: uppercase;
-  font-family: "Antic Didone";
+  font-family: var(--Antic);
   text-align: center;
   margin-bottom: 20px !important;
 }

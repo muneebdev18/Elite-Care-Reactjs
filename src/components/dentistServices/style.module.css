@@ -117,18 +117,18 @@
         content: "";
         background-color: #fff;
         position: absolute;
-        left: 700px;
+        left: 751px;
         top: 15px;
         height: 1px;
-        width: 6%;
+        width: 5%;
     }
       #maintext p:after {
         content: "";
         background-color: #fff;
-        width: 6%;
+        width: 5%;
         height: 1px;
         position: absolute;
-        right: 700px;
+        right: 751px;
         top: 15px;
       }
     
@@ -184,7 +184,7 @@
        content: "";
        background-color: #fff;
        position: absolute;
-       left: 490px;
+       left: 530px;
        top: 15px;
        height: 1px;
        width: 6%;
@@ -195,7 +195,7 @@
        width: 6%;
        height: 1px;
        position: absolute;
-       right: 490px;
+       right: 530px;
        top: 15px;
      }
      .columtext{
@@ -221,7 +221,7 @@
         content: "";
         background-color: #fff;
         position: absolute;
-        left: 490px;
+        left: 510px;
         top: 15px;
         height: 1px;
         width: 6%;
@@ -232,7 +232,7 @@
         width: 6%;
         height: 1px;
         position: absolute;
-        right: 490px;
+        right: 510px;
         top: 15px;
       }
       .columtext{
@@ -336,8 +336,8 @@
       content: "";
       background-color: #fff;
       position: absolute;
-      left: 280px;
-      top: 15px;
+      left: 290px;
+      top: 10px;
       height: 1px;
       width: 6%;
   }
@@ -347,8 +347,48 @@
       width: 6%;
       height: 1px;
       position: absolute;
-      right: 280px;
-      top: 15px;
+      right: 290px;
+      top: 10px;
+    }
+    .columtext{
+      font-size: 12px;
+    }
+
+    
+  }
+  @media (max-width:768px) {
+    .column h2{
+      font-family: "Antic Didone";
+      font-size: 22px;
+    }
+    .columtext{
+      font-size: 12px;
+    }
+    #maintext p{
+      font-size: 16px;
+      font-family: "Inter";
+  }
+    #maintext h1{
+      font-family: "Antic Didone";
+      font-size: 40px;
+  }
+    #maintext p::before {
+      content: "";
+      background-color: #fff;
+      position: absolute;
+      left: 260px;
+      top: 10px;
+      height: 1px;
+      width: 6%;
+  }
+    #maintext p:after {
+      content: "";
+      background-color: #fff;
+      width: 6%;
+      height: 1px;
+      position: absolute;
+      right: 260px;
+      top: 10px;
     }
     .columtext{
       font-size: 12px;
@@ -376,8 +416,8 @@
       content: "";
       background-color: #fff;
       position: absolute;
-      left: 280px;
-      top: 15px;
+      left: 290px;
+      top: 10px;
       height: 1px;
       width: 6%;
   }
@@ -387,8 +427,8 @@
       width: 6%;
       height: 1px;
       position: absolute;
-      right: 280px;
-      top: 15px;
+      right: 290px;
+      top: 10px;
     }
     .column{
       width: 80%;
@@ -416,25 +456,25 @@
     }
       #maintext h1{
         font-family: "Antic Didone";
-        font-size: 40px;
+        font-size: 33px;
     }
       #maintext p::before {
-        content: "";
+        content: ""; 
         background-color: #fff;
         position: absolute;
-        left: 220px;
-        top: 15px;
+        left: 240px;
+        top: 10px;
         height: 1px;
-        width: 6%;
+        width: 10%;
     }
       #maintext p:after {
         content: "";
         background-color: #fff;
-        width: 6%;
+        width: 10%;
         height: 1px;
         position: absolute;
-        right: 220px;
-        top: 15px;
+        right: 240px;
+        top: 10px;
       }
       .column{
 

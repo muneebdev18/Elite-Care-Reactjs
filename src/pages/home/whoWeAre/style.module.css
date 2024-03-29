@@ -11,6 +11,7 @@
   font-weight: 500;
   position: relative;
   margin-bottom: 5px;
+  font-family: var(--Inter);
 }
 
 .whoWeAreHeading > p::before {
@@ -24,7 +25,7 @@
 }
 
 .whoWeAreTitle {
-  font-family: "Antic Didone";
+  font-family: var(--Antic);
   font-size: 52px;
   font-style: normal;
   font-weight: 400;

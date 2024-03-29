@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar";
-import logo from "../../assets/about-banner.png";
+import logo from "../../assets/about-banner.webp";
 import OurMission from "./ourMission";
 import Footer from "../../components/footer";
 import Services from "./services";

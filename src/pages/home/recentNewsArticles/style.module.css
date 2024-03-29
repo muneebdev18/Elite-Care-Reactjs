@@ -11,19 +11,18 @@
   color: #111;
   font-size: 20px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 1.719px;
   text-transform: uppercase;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--Inter)
 }
 .upperSectionWrapper > h4::before {
   content: "";
   background-color: #000;
   position: absolute;
-  left: -30px;
-  top: 14px;
+  left: -60px;
+  top: 11px;
   height: 2px;
   width: 75px;
 }
@@ -33,8 +32,8 @@
   background-color: #000;
   /* padding: 2px 0px; */
   position: absolute;
-  right: -30px;
-  top: 14px;
+  right: -60px;
+  top: 11px;
   height: 2px;
   width: 75px;
 }
@@ -71,11 +70,15 @@
 }
 .cardImg {
   overflow: hidden;
+  height: 200px;
+  border-top-right-radius:12px;
+  border-top-left-radius: 12px;
 }
 .cardImg > img {
   width: 100%;
   overflow: hidden !important;
   transition: 1.5s;
+  height: 100%;
 }
 .cardImg > img:hover {
   transform: scale(1.3);
@@ -126,7 +129,7 @@
   align-items: center;
 }
 
-.readMoreWrapper > p {
+.readMoreWrapper > a {
   color: #111;
   font-size: 15px;
   font-style: normal;
@@ -156,12 +159,12 @@
     font-size: 15px;
   }
   .upperSectionWrapper > h4::before {
-    left: -26px;
+    left: -46px;
     top: 9px;
     width: 55px;
   }
   .upperSectionWrapper > h4::after {
-    right: -26px;
+    right: -46px;
     top: 9px;
     width: 55px;
   }
@@ -185,13 +188,14 @@
     font-size: 14px;
   }
   .upperSectionWrapper > h4::before {
-    left: -19px;
-    top: 9px;
-    width: 32px;
+    left: -45px;
+    top: 8px;
+    width: 40px;
+
   }
   .upperSectionWrapper > h4::after {
-    right: -19px;
-    top: 9px;
-    width: 32px;
+    right: -45px;
+    top: 8px;
+    width: 40px;
   }
 }

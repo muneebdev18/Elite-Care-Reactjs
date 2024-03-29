@@ -3,7 +3,7 @@ import styles from "./style.module.css";
 import LoginForm from "./loginForm";
 import Navbar from "../../../components/navbar";
 import Footer from "../../../components/footer";
-import logo from "../../../assets/about-banner.png";
+import logo from "../../../assets/about-banner.webp";
 const Login = () => {
   const data = {
     h1: null,

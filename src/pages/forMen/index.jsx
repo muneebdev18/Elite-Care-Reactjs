@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar";
-import styles from "./style.moudle.css";
-import logo from "../../assets/Formen.png";
+import useSWR from "swr";
+import logo from "../../assets/Formen.webp";
 import ShowCasesComponent from "../../components/showCasesComp";
 import Footer from "../../components/footer";
 // Show cases Images
@@ -10,18 +10,14 @@ import Formen2 from "../../assets/formen2.png";
 import Formen3 from "../../assets/formen3.png";
 import Formen4 from "../../assets/formen4.png";
 import DentistServices from "../../components/dentistServices";
-// Card Services Images
-import cosmetic1 from "../../assets/cosmetic1.png";
-import cosmetic2 from "../../assets/cosmetic2.png";
-import cosmetic3 from "../../assets/cosmetic3.png";
-import cosmetic4 from "../../assets/cosmetic4.png";
 
 import beforeImg from "../../assets/dentistBefore.png";
 import afterImg from "../../assets/dentistAfter.png";
 import ImageComparison from "../../components/Imagecomparison/ImageCamparison";
+import { constants } from "../../global/constants";
 
 const ForMen = () => {
-  const data = {
+  const Navdata = {
     h1: null,
     h2: "FOR MEN",
     h3: null,
@@ -37,32 +33,11 @@ const ForMen = () => {
     img4: Formen4,
   };
 
-  const carddatacosmitc = {
-    mainheading: "SERVICES",
-    mainHeadingtwo: "The Top 4 Cosmetic Procedures For Men",
-    card: [
-      {
-        image: cosmetic1,
-        heading1: "Cosmetic Laser",
-        para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harumqui nihil quos sequi, quam cumque consectetur fugit, ipsamveritatis iure eaque? Harum quam ipsa, esse minima aspernaturiste reprehenderit cupiditate.",
-      },
-      {
-        image: cosmetic2,
-        heading1: "Gynecomastia",
-        para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harumqui nihil quos sequi, quam cumque consectetur fugit, ipsamveritatis iure eaque? Harum quam ipsa, esse minima aspernaturiste reprehenderit cupiditate.",
-      },
-      {
-        image: cosmetic3,
-        heading1: "Hair Transplant",
-        para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harumqui nihil quos sequi, quam cumque consectetur fugit, ipsamveritatis iure eaque? Harum quam ipsa, esse minima aspernaturiste reprehenderit cupiditate.",
-      },
-      {
-        image: cosmetic4,
-        heading1: "Hair Transplant",
-        para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harumqui nihil quos sequi, quam cumque consectetur fugit, ipsamveritatis iure eaque? Harum quam ipsa, esse minima aspernaturiste reprehenderit cupiditate.",
-      },
-    ],
-  };
+
+  
+  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  const {data, error, isLoading } = useSWR(`${constants.baseUrl}api/services?pagename=forMen`,fetcher)
+const serviceData = data?.data?.results?.results
   const beforeAfterImgs = {
     img1: beforeImg,
     img2: afterImg,
@@ -71,9 +46,9 @@ const ForMen = () => {
   const bottomImage = { src: afterImg, alt: "After" };
   return (
     <>
-      <Navbar data={data} />
+      <Navbar data={Navdata} />
       <ShowCasesComponent showCaseImgs={showCaseImgs} />
-      <DentistServices carddata={carddatacosmitc} />
+      <DentistServices carddata={serviceData} head1="SERVICES" head2="The Top 4 Cosmetic Procedures For Men" />
       <ImageComparison topImage={topImage} bottomImage={bottomImage} />
       <Footer />
     </>
